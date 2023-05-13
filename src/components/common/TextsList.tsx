@@ -11,7 +11,7 @@ const TextsList=({data, numColumns=2, itemPropertyText }:TextsListTypes)=>{
     return (
         <FlatList
             data={data}
-            numColumns={numColumns} // Set the number of columns to 2
+            numColumns={numColumns}
             columnWrapperStyle={styles.columnWrapper}
             renderItem={({item})=>(
                 <TextListItem 
