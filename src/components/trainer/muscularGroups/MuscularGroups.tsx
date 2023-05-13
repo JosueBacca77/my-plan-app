@@ -1,6 +1,4 @@
-import { View, Text, FlatList, StyleSheet } from "react-native";
 import MainContainer from "../../common/MainContainer";
-import TextListItem from "../../common/TextListItem";
 import TextsList from "../../common/TextsList";
 
 const MuscularGroups=()=>{
@@ -23,15 +21,15 @@ const MuscularGroups=()=>{
             name:'Cuádriceps'
         },
         {
-            id:'1',
+            id:'5',
             name:'Gluteos'
         },
         {
-            id:'1',
+            id:'6',
             name:'Isquiotibiales'
         },
         {
-            id:'1',
+            id:'7',
             name:'Abdomen'
         },
     ]
@@ -45,12 +43,5 @@ const MuscularGroups=()=>{
         </MainContainer>
     )
 }
-
-const styles = StyleSheet.create({
-    columnWrapper:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-    },
-})
 
 export default MuscularGroups;
