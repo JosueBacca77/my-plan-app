@@ -16,6 +16,7 @@ const MainContainer=({children}:MainContainerTypes)=>{
 const styles = StyleSheet.create({
     container:{
         padding:10,
+        flex:1,
     },
 })
 

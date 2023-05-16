@@ -1,16 +1,16 @@
 import { View } from "react-native"
 import Constants from 'expo-constants'
 import TrainerHome from "./screens/trainer/TrainerHome";
-import { NativeBaseProvider, Box } from "native-base";
+import { NativeBaseProvider } from "native-base";
+import genesisTheme from "./themes/genesis";
 
 const Root=()=>{
     return(
-        <NativeBaseProvider>
+        <NativeBaseProvider theme={genesisTheme}>
             <View style={{ marginTop: Constants.statusBarHeight, flex:1}}>
                 <TrainerHome />
             </View>
         </NativeBaseProvider>
-
     )
 }
 

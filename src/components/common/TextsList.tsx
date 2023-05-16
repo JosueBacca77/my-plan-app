@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     columnWrapper:{
         flexDirection:'row',
         justifyContent:'space-between',
+        paddingHorizontal:6
     },
 })
 
