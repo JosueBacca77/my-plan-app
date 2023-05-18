@@ -32,6 +32,15 @@ const genesisTheme = extendTheme({
   config: {
     defaultTextColor: '#FFFFFF',
   },
+  components: {
+    Input: {
+      defaultProps: {
+        _focus: {
+          borderColor: '#D3D3D3',
+        },
+      },
+    },
+  },
 });
 
 export default genesisTheme;
