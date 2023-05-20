@@ -5,8 +5,9 @@ import { MuscularGroup } from "../../../interfaces/MuscularGroup.interface";
 import { Exersice } from "../../../interfaces/Exersice.interface";
 import CircleAddButton from "../../common/CircleButton";
 import { useState } from "react";
-import { NewExerciseForm } from ".";
 import Modal from "../../common/Modal";
+import NewExerciseForm from "./NewExerciseForm/NewExerciseForm";
+import { NEW_EXERCISE } from "../../../constants/strings";
 
 type ExersicesContentTypes = {
     muscularGroups: MuscularGroup[], 
@@ -25,6 +26,15 @@ const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
         setMuscularGroupSelected(mg);
     };
 
+    const handleCancel= () => {
+        setModalVisible(false);
+    };
+
+    const handleSubmit= (data:any) => {
+        //SAVE EXERCISE
+        console.log(data)
+    };
+
     return (
         <View
             style={styles.exersicesContent}
@@ -32,11 +42,12 @@ const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
             <Modal
                 modalVisible={modalVisible}
                 setModalVisible={setModalVisible}
-                header='Nuevo ejercicio'
-                submitText='Guardar'
-                cancelText="Cancelar"
+                header={NEW_EXERCISE}
             >
-                <NewExerciseForm />
+                <NewExerciseForm 
+                    onCancel={handleCancel}
+                    onSubmit={handleSubmit}
+                />
             </Modal>
             <Select selectedValue={muscularGroupSelected} accessibilityLabel="Grupo muscular" placeholder="Grupo muscular" _selectedItem={{
                 bg: colors.primary[500]

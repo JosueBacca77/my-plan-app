@@ -32,7 +32,7 @@ const FormButton =({text, onPress, variant=BUTTON_TYPE.SUBMIT, width}: PrimaryBu
             onPressOut={handlePressOut}
             style={{
                 backgroundColor: isPressed ? pressedButtonColor : buttonColor,
-                width:width
+                width:width,
             }}
         >
             {text}

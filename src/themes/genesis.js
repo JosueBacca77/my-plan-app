@@ -36,7 +36,8 @@ const genesisTheme = extendTheme({
     Input: {
       defaultProps: {
         _focus: {
-          borderColor: '#D3D3D3',
+          borderColor: 'transparent',
+          borderBottomColor: '#D3D3D3',
         },
       },
     },
