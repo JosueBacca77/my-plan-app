@@ -1,13 +1,14 @@
 import { Select, useTheme } from "native-base";
 import {StyleSheet, View} from "react-native"
-import TextsList from "../../common/TextsList";
 import { MuscularGroup } from "../../../interfaces/MuscularGroup.interface";
 import { Exersice } from "../../../interfaces/Exersice.interface";
-import CircleAddButton from "../../common/CircleButton";
 import { useState } from "react";
-import Modal from "../../common/Modal";
 import NewExerciseForm from "./NewExerciseForm/NewExerciseForm";
-import { NEW_EXERCISE } from "../../../constants/strings";
+import { NEW_EXERCISE } from "../../../configs/constants/strings";
+import Modal from "../../../components/Modal/Modal";
+import TextsList from "../../../components/TextsList/TextsList";
+import CircleAddButton from "../../../components/CircleButton/CircleButton";
+
 
 type ExersicesContentTypes = {
     muscularGroups: MuscularGroup[], 
@@ -58,7 +59,7 @@ const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
                 ))
             }
             </Select>
-            <TextsList 
+            <TextsList
                 data={exersices}
                 numColumns={2}
                 itemPropertyText={'name'}

@@ -1,6 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
+import { TextsListItemProps } from "./types";
 
-const TextListItem=({text}:{text:string})=>{
+export default function TextsListItem(textsListItemProps:TextsListItemProps){
+
+    const { text } = textsListItemProps;
+
     return (
         <View
             style={styles.textItemContainer}
@@ -24,5 +28,3 @@ const styles = StyleSheet.create({
         textAlign:'left',
     },
 })
-
-export default TextListItem;

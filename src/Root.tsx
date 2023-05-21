@@ -1,8 +1,8 @@
 import { View } from "react-native"
 import Constants from 'expo-constants'
-import TrainerHome from "./screens/trainer/TrainerHome";
 import { NativeBaseProvider } from "native-base";
 import genesisTheme from "./themes/genesis";
+import TrainerHome from "./features/trainer/TrainerHome";
 
 const Root=()=>{
     return(

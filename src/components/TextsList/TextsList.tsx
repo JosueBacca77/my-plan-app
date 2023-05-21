@@ -1,20 +1,19 @@
 import { FlatList, StyleSheet } from "react-native";
-import TextListItem from "./TextListItem";
+import TextsListItem from "./textsListItem/TextsListItem";
+import { TextsListProps } from "./types";
 
-type TextsListTypes = {
-    data: any[], 
-    numColumns:number, 
-    itemPropertyText:string
-}
 
-const TextsList=({data, numColumns=2, itemPropertyText }:TextsListTypes)=>{
+export default function TextsList(textsListProps:TextsListProps){
+
+    const {data, numColumns=2, itemPropertyText } = textsListProps;
+
     return (
         <FlatList
             data={data}
             numColumns={numColumns}
             columnWrapperStyle={styles.columnWrapper}
             renderItem={({item})=>(
-                <TextListItem 
+                <TextsListItem
                     text={item[itemPropertyText]}
                 />
             )}
@@ -30,5 +29,3 @@ const styles = StyleSheet.create({
         paddingHorizontal:6
     },
 })
-
-export default TextsList;

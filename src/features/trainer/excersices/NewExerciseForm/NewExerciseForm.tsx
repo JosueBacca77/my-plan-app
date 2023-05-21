@@ -1,13 +1,14 @@
 import { View } from "native-base";
 import { Formik } from 'formik';
-import { NewExersiceSchema } from "./../schemas";
-import FormikInputValue from "../../../common/formik/FormikInputValue";
-import FormFooter from "../../../common/FormFooter/FormFooter";
-import FormButton from "../../../common/FormButton";
+import { NewExersiceSchema } from "../schemas";
+
+import Button from "../../../../components/Button/Button";
 import { BUTTON_TYPE } from "../../../../configs/enums";
-import { CANCEL_TEXT, SUBMIT_TEXT } from "../../../../constants/strings";
+import { CANCEL_TEXT, SUBMIT_TEXT } from "../../../../configs/constants/strings";
 import { NewExerciseProps } from "./types";
 import { StyleSheet } from "react-native";
+import FormikInputValue from "../../../../components/Formik/FormikInputValue";
+import FormFooter from "../../../../components/FormFooter/FormFooter";
 
 const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
 
@@ -32,13 +33,13 @@ const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
                                 name='name'
                             />
                             <FormFooter>
-                                    <FormButton
+                                    <Button
                                         onPress={onCancel}
                                         text={CANCEL_TEXT}
                                         variant={BUTTON_TYPE.CANCEL}
                                         width={100}
                                     />
-                                    <FormButton
+                                    <Button
                                         onPress={handleSubmit}
                                         text={SUBMIT_TEXT}
                                         variant={BUTTON_TYPE.SUBMIT}

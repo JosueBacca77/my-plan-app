@@ -1,9 +1,9 @@
 import { Modal as NativeBaseModal } from "native-base";
 import { ReactNode } from "react";
 import { StyleSheet } from "react-native"
+import FormFooter from "../FormFooter/FormFooter";
+import Button from "../Button/Button";
 import { BUTTON_TYPE } from "../../configs/enums";
-import FormButton from "./FormButton";
-import FormFooter from "./FormFooter/FormFooter";
 
 type ModalTypes = {
     modalVisible: boolean,
@@ -30,7 +30,7 @@ const Modal = ({ modalVisible, setModalVisible, header, cancelText, submitText, 
                         <FormFooter>
                             {
                                 cancelText &&
-                                <FormButton
+                                <Button
                                     onPress={() =>
                                         setModalVisible(false)
                                     }
@@ -41,7 +41,7 @@ const Modal = ({ modalVisible, setModalVisible, header, cancelText, submitText, 
                             }
                             {
                                 submitText &&
-                                <FormButton
+                                <Button
                                     onPress={onSubmit}
                                     text={submitText}
                                     variant={BUTTON_TYPE.SUBMIT}

@@ -1,4 +1,4 @@
-import MainContainer from "../../common/MainContainer";
+import MainContainer from "../../../components/MainContainer/MainContainer";
 import ExersicesContent from "./ExersicesContent";
 
 const Exersices=()=>{

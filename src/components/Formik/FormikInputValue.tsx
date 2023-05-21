@@ -1,8 +1,8 @@
 import { useField } from "formik";
 import { Input, View } from "native-base";
+import Text from "../Text/Text";
 import { FormikInputProps } from "./types";
-import Text from "../text/Text";
-import { FontVariant } from "../text/types";
+import { FontVariant } from "../Text/types";
 
 export default function FormikInputValue(formikInputProps: FormikInputProps) {
 

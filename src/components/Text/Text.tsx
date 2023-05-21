@@ -1,5 +1,5 @@
-import { TextProps, getFontSize, getLineHeight } from "./types";
 import { Text as NativeBaseText } from 'native-base';
+import { TextProps, getFontSize, getLineHeight } from './types';
 
 export default function Text(textProps: TextProps) {
     const { fontColor, variant, value, ...props } = textProps;

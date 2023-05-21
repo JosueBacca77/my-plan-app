@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
 import { View, StyleSheet } from "react-native";
+import { MainContainerProps } from "./types";
 
-type MainContainerTypes = {
-    children: ReactNode;
-}
 
-const MainContainer=({children}:MainContainerTypes)=>{
+const MainContainer=(mainContainerProps:MainContainerProps)=>{
+
+    const {children} = mainContainerProps;
+
     return (
         <View style={styles.container}>
             {children}

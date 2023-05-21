@@ -1,15 +1,12 @@
-import { Button, useTheme } from "native-base";
-import { BUTTON_TYPE } from "../../configs/enums";
+import { Button as NativeBaseButton, useTheme } from "native-base";
 import { useState } from "react";
+import { ButtonProps } from "./types";
+import { BUTTON_TYPE } from "../../configs/enums";
 
-type PrimaryButtonTypes = {
-    text:string,
-    onPress:any,
-    variant: BUTTON_TYPE,
-    width?:number
-}
 
-const FormButton =({text, onPress, variant=BUTTON_TYPE.SUBMIT, width}: PrimaryButtonTypes)=>{
+export default function Button(primaryButtonProps: ButtonProps){
+
+    const {text, onPress, variant=BUTTON_TYPE.SUBMIT, width} = primaryButtonProps;
 
     const theme = useTheme();
     const [isPressed, setIsPressed] = useState(false);
@@ -25,7 +22,7 @@ const FormButton =({text, onPress, variant=BUTTON_TYPE.SUBMIT, width}: PrimaryBu
       };
 
     return(
-        <Button 
+        <NativeBaseButton 
             flex={width ? '' : "1"} 
             onPress={()=>onPress()}
             onPressIn={handlePressIn}
@@ -36,8 +33,6 @@ const FormButton =({text, onPress, variant=BUTTON_TYPE.SUBMIT, width}: PrimaryBu
             }}
         >
             {text}
-        </Button>
+        </NativeBaseButton>
     )
 }
-
-export default FormButton;

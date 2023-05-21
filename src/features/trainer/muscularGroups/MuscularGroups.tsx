@@ -1,5 +1,6 @@
-import MainContainer from "../../common/MainContainer";
-import TextsList from "../../common/TextsList";
+import MainContainer from "../../../components/MainContainer/MainContainer";
+import TextsList from "../../../components/TextsList/TextsList";
+
 
 const MuscularGroups=()=>{
 
