@@ -1,17 +1,24 @@
-import { View } from "react-native"
-import Constants from 'expo-constants'
+import { StyleSheet, View, SafeAreaView } from "react-native"
 import { NativeBaseProvider } from "native-base";
 import genesisTheme from "./themes/genesis";
 import TrainerHome from "./features/trainer/TrainerHome";
 
-const Root=()=>{
-    return(
-        <NativeBaseProvider theme={genesisTheme}>
-            <View style={{ marginTop: Constants.statusBarHeight, flex:1}}>
-                <TrainerHome />
-            </View>
-        </NativeBaseProvider>
+const Root = () => {
+    return (
+        <SafeAreaView style={styles.container}>
+            <NativeBaseProvider theme={genesisTheme}>
+                <View style={{ flex: 1 }}>
+                    <TrainerHome />
+                </View>
+            </NativeBaseProvider>
+        </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+});
 
 export default Root;

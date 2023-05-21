@@ -1,7 +1,12 @@
-import { View, Text } from "react-native";
+import { Text } from "native-base";
+import MainContainer from "../../../components/MainContainer/MainContainer";
 
-const Students=()=>{
-    return (<Text>hola11</Text>)
+const Students = () => {
+    return (
+        <MainContainer>
+            <Text>Lista de alumnos</Text>
+        </MainContainer>
+    )
 }
 
 export default Students;
