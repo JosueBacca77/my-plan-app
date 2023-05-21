@@ -1,10 +1,11 @@
 import { Text } from "native-base";
 import MainContainer from "../../../components/MainContainer/MainContainer";
+import StudentsContent from "./studentsContent/StudentsContent";
 
 const Students = () => {
     return (
         <MainContainer>
-            <Text>Lista de alumnos</Text>
+            <StudentsContent />
         </MainContainer>
     )
 }

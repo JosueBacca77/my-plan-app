@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { StyleSheet } from "react-native"
 import FormFooter from "../FormFooter/FormFooter";
 import Button from "../Button/Button";
-import { BUTTON_TYPE } from "../../configs/enums";
+import { BUTTON_TYPE } from "../../configs/button";
 
 type ModalTypes = {
     modalVisible: boolean,

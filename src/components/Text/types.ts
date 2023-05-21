@@ -1,7 +1,9 @@
+import { StyleProp, TextStyle } from "react-native";
 export interface TextProps {
-    fontColor: string,
-    variant: FontVariant,
-    value: string
+    fontColor?: string,
+    variant?: FontVariant,
+    value: string,
+    style?: StyleProp<TextStyle>
 }
 
 export enum FontVariant {

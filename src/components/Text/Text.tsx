@@ -1,8 +1,8 @@
 import { Text as NativeBaseText } from 'native-base';
-import { TextProps, getFontSize, getLineHeight } from './types';
+import { FontVariant, TextProps, getFontSize, getLineHeight } from './types';
 
 export default function Text(textProps: TextProps) {
-    const { fontColor, variant, value, ...props } = textProps;
+    const { fontColor, variant=FontVariant.TEXT_XS, value, style } = textProps;
 
     const fontSize = getFontSize(variant);
     const lineHeight = getLineHeight(variant);
@@ -12,7 +12,7 @@ export default function Text(textProps: TextProps) {
             color={fontColor}
             fontSize={fontSize}
             lineHeight={lineHeight}
-            {...props}
+            style={style}
         >
             {value}
         </NativeBaseText>

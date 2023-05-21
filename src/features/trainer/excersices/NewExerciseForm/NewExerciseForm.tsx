@@ -3,7 +3,7 @@ import { Formik } from 'formik';
 import { NewExersiceSchema } from "../schemas";
 
 import Button from "../../../../components/Button/Button";
-import { BUTTON_TYPE } from "../../../../configs/enums";
+import { BUTTON_TYPE } from "../../../../configs/button";
 import { CANCEL_TEXT, SUBMIT_TEXT } from "../../../../configs/constants/strings";
 import { NewExerciseProps } from "./types";
 import { StyleSheet } from "react-native";

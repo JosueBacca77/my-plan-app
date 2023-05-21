@@ -1,7 +1,7 @@
 import { Button as NativeBaseButton, useTheme } from "native-base";
 import { useState } from "react";
 import { ButtonProps } from "./types";
-import { BUTTON_TYPE } from "../../configs/enums";
+import { BUTTON_TYPE } from "../../configs/button";
 
 
 export default function Button(primaryButtonProps: ButtonProps){
