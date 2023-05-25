@@ -4,9 +4,9 @@ import StudentsContent from "./studentsContent/StudentsContent";
 
 const Students = () => {
     return (
-        <MainContainer>
+        // <MainContainer>
             <StudentsContent />
-        </MainContainer>
+        // </MainContainer>
     )
 }
 

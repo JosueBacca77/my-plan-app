@@ -3,6 +3,7 @@ export interface TextProps {
     fontColor?: string,
     variant?: FontVariant,
     value: string,
+    fontWeight?: string,
     style?: StyleProp<TextStyle>
 }
 
