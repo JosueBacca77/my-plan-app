@@ -1,5 +1,5 @@
 import { StudentsNavigationProp } from "../types";
 
-export interface StudentsListProps {
+export interface StudentProps {
     navigation: StudentsNavigationProp;
 };

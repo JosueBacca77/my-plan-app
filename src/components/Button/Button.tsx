@@ -30,6 +30,7 @@ export default function Button(primaryButtonProps: ButtonProps){
             style={{
                 backgroundColor: isPressed ? pressedButtonColor : buttonColor,
                 width:width,
+                height:38
             }}
         >
             {text}
