@@ -2,5 +2,7 @@ export interface StudentItemProps {
     image?:string,
     name:string,
     age:number,
-    target:string
+    target:string,
+    id:string,
+    handleSelectStudent:(id:string)=>void
 }
