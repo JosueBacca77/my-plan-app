@@ -1,5 +1,4 @@
-export interface Exersice {
+export interface Exersice{
     id: string,
-    name: string,
-    muscularGroup: string
+    name: string
 }

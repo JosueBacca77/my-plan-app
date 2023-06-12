@@ -7,7 +7,7 @@ import { FontVariant } from "../../../../../../components/Text/types";
 
 export default function StudentItem(studentItemProps: StudentItemProps) {
 
-    const { id, image, name, age, target, handleSelectStudent } = studentItemProps;
+    const { id, image, name, age, handleSelectStudent } = studentItemProps;
 
     const onPressStudent = () => {
         handleSelectStudent(id);
@@ -33,11 +33,6 @@ export default function StudentItem(studentItemProps: StudentItemProps) {
                         style={styles.name}
                     />
                 </View>
-                <Text
-                    value={target}
-                    variant={FontVariant.TEXT_SM}
-                    style={styles.target}
-                />
                 <Text
                     value={age.toString()}
                     variant={FontVariant.TEXT_SM}

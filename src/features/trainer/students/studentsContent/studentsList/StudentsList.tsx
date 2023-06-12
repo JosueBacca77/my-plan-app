@@ -28,7 +28,6 @@ export default function StudentsList(studentsNavigationProp: StudentsListProps) 
                     <StudentItem
                         name={item.name}
                         age={item.age}
-                        target={item.target}
                         image={item.image}
                         id={item.id.toString()}
                         handleSelectStudent={handleSelectStudent}
