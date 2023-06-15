@@ -1,5 +1,5 @@
-import { StudentsNavigationProp } from "../types";
+import { StudentsNavigationProps } from "../types";
 
 export interface StudentsListProps {
-    navigation: StudentsNavigationProp;
+    navigation: StudentsNavigationProps;
 };

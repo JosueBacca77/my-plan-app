@@ -1,6 +1,6 @@
 import { LastPlansItemProps } from "./types";
 import { Pressable, Box, Flex } from "native-base";
-import Text from "../../../../../../../../components/Text/Text";
+import Text from "../../../../../../../../../components/Text/Text";
 
 
 export default function LastPlansItem(lastPlansItemProps: LastPlansItemProps) {

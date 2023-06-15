@@ -1,5 +1,10 @@
-import { StudentsNavigationProp } from "../types";
+import { StudentsNavigationProps } from "../types";
 
 export interface StudentProps {
-    navigation: StudentsNavigationProp;
+    navigation: StudentsNavigationProps;
+    route: {
+        params: {
+          studentId: string;
+        };
+      };
 };

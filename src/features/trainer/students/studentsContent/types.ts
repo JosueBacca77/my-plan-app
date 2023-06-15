@@ -1,14 +1,22 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 
-export interface StudentsContentProps {
-    students: any[]
-}
+// export interface StudentsContentProps {
+//     students: any[]
+// }
 
-type RootStackStudents = {
-    Students: undefined;
-    Student: { studentId: string };
-};
+// type RootStackStudents = {
+//     Students: undefined;
+//     Student: { studentId: string };
+// };
 
-export type StudentsNavigationProp = StackNavigationProp<
-    RootStackStudents
->;
+// export type StudentsNavigationProps = StackNavigationProp<
+//     RootStackStudents
+// >;
+
+export interface StudentsNavigationProps {
+    navigation: {
+      push: (screen: string, params?: Record<string, any>) => void;
+      // Other navigation-related properties and methods
+      // You can add more specific types based on your requirements
+    };
+  }

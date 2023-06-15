@@ -1,6 +1,6 @@
 import { View, useTheme } from "native-base";
-import Text from "../../../../../../../components/Text/Text";
-import { FontVariant } from "../../../../../../../components/Text/types";
+import Text from "../../../../../../../../components/Text/Text";
+import { FontVariant } from "../../../../../../../../components/Text/types";
 import { StyleSheet } from "react-native";
 import { TrainingSectionProps } from "./types";
 

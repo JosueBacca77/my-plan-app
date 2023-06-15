@@ -1,16 +1,16 @@
 import { HStack, View, useTheme } from "native-base";
 import { StudentTrainingInformationProps } from "./types";
-import Text from "../../../../../../components/Text/Text";
-import { FontVariant } from "../../../../../../components/Text/types";
+import Text from "../../../../../../../components/Text/Text";
+import { FontVariant } from "../../../../../../../components/Text/types";
 import TrainingSection from "./trainingSection/TrainingSection";
-import SecondaryButton from "../../../../../../components/SecondaryButton/SecondaryButton";
+import SecondaryButton from "../../../../../../../components/SecondaryButton/SecondaryButton";
 import LastPlans from "./plans/LastPlans";
+import { StudentProps } from "../../types";
 
 
 export default function StudentTrainingInformation(studentTrainingInformationProps: StudentTrainingInformationProps) {
 
     const { medicalConditions, plans } = studentTrainingInformationProps;
-
     const theme = useTheme();
 
     return (

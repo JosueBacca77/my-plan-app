@@ -1,3 +1,5 @@
+import { PlanInterface } from "./plan/Plan.interface";
+
 export interface StudentInterface {
     id: string,
     name: string,
@@ -6,5 +8,5 @@ export interface StudentInterface {
     weight?: number,
     image?: string,
     medicalConditions: string[],
-    plans: any[]
+    plans: PlanInterface[]
 }

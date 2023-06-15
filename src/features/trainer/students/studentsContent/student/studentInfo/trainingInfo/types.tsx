@@ -1,5 +1,6 @@
 import { PlanInterface } from "../../../../../../../interfaces/plan/Plan.interface";
 
-export interface LastPlansProps {
+export interface StudentTrainingInformationProps {
+    medicalConditions: string[],
     plans: PlanInterface[]
 }

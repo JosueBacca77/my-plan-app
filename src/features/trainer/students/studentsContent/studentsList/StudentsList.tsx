@@ -1,12 +1,12 @@
 import { FlatList } from "native-base";
 import StudentItem from "./studentItem/StudentItem";
 import { useState } from "react";
-import { StudentsListProps } from "./types";
 import MainContainer from "../../../../../components/MainContainer/MainContainer";
 import useStudentsStore from '../../useStudentsStore';
+import { StudentsNavigationProps } from "../types";
 
 
-export default function StudentsList(studentsNavigationProp: StudentsListProps) {
+export default function StudentsList(studentsNavigationProp: StudentsNavigationProps) {
 
     const { navigation } = studentsNavigationProp;
 
