@@ -219,7 +219,9 @@ export default function Students() {
             <Stack.Screen name="Students"
                 component={StudentsList} 
             />
-            <Stack.Screen name="Student" component={Student} />
+            <Stack.Screen name="Student"
+                component={Student}
+            />
         </Stack.Navigator>
     )
 }
