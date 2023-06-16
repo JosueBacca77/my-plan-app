@@ -17,7 +17,7 @@ const genesisTheme = extendTheme({
       900: '#E65100',
     },
     secondary:{
-      100:'#FFAA55'
+      100:'#FEC287'
       //Targets colors
       // 100: '#D5CA19',
       // 200: '#8EC916',

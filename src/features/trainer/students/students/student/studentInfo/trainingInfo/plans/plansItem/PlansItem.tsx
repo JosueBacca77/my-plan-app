@@ -1,14 +1,14 @@
-import { LastPlansItemProps } from "./types";
+import { PlansItemProps } from "./types";
 import { Pressable, Box, Flex } from "native-base";
 import Text from "../../../../../../../../../components/Text/Text";
 
 
-export default function LastPlansItem(lastPlansItemProps: LastPlansItemProps) {
+export default function PlansItem(plansItemProps: PlansItemProps) {
 
-    const { plan } = lastPlansItemProps;
+    const { plan } = plansItemProps;
 
     return (
-        <Box alignItems="center">
+        <Box alignItems="center" marginRight={4} marginBottom={4} flex={1} key={plan.id} >
             <Pressable maxW="96">
                 {({
                     isHovered,

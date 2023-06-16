@@ -1,5 +1,5 @@
 import { PlanInterface } from "../../../../../../../../../interfaces/plan/Plan.interface";
 
-export interface LastPlansItemProps {
+export interface PlansItemProps {
     plan: PlanInterface
 }

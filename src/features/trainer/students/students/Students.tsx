@@ -1,11 +1,11 @@
-import StudentsList from "./studentsList/StudentsList";
 import { createStackNavigator } from '@react-navigation/stack';
-import Student from "./student/Student";
 import useStudentsStore from '../useStudentsStore';
 import { useEffect } from "react";
+import StudentsList from './studentsList/StudentsList';
+import Student from './student/Student';
 
 
-export default function StudentsContent() {
+export default function Students() {
 
     const Stack = createStackNavigator();
     const { setStudents } = useStudentsStore();
@@ -216,7 +216,9 @@ export default function StudentsContent() {
                 headerShown: false
             }}
         >
-            <Stack.Screen name="Students" component={StudentsList} />
+            <Stack.Screen name="Students"
+                component={StudentsList} 
+            />
             <Stack.Screen name="Student" component={Student} />
         </Stack.Navigator>
     )

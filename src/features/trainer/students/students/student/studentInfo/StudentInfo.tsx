@@ -1,4 +1,4 @@
-import { View } from "native-base";
+import { Flex } from "native-base";
 import { StudentInfoProps } from "./types";
 import StudentPersonalInformation from "./personalInfo/StudentPersonalInformation";
 import StudentTrainingInformation from "./trainingInfo/StudentTrainingInformation";
@@ -11,10 +11,12 @@ export default function StudentInfo(studentInfoProps: StudentInfoProps) {
     const studentTarget =  student && student.plans.length > 0 ? student.plans[0].target : ''
 
     return (
-        <View style={{ flex: 1, paddingTop: 10 }}>
+        <Flex flex={1} style={{ paddingTop: 10 }}>
             {
                 student ?
-                    <View>
+                    <Flex
+                        flex={1}
+                    >
                         <StudentPersonalInformation
                             name={student.name}
                             age={student.age}
@@ -27,12 +29,12 @@ export default function StudentInfo(studentInfoProps: StudentInfoProps) {
                             medicalConditions={student.medicalConditions}
                             plans={student.plans}
                         />
-                    </View>
+                    </Flex>
                     :
                     <Text
                         value='Error al cargar alumno'
                     />
             }
-        </View>
+        </Flex>
     )
 }

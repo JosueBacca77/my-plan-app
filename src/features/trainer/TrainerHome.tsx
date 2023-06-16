@@ -1,12 +1,11 @@
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Students } from "./students";
-import React from 'react';
 import { MuscularGroups } from "./muscularGroups";
 import { Exersices } from "./excersices";
 import { useTheme } from "native-base";
-
+import Students from "./students/students/Students";
+import React from 'react';
 
 interface Props {
     // add any additional props here
