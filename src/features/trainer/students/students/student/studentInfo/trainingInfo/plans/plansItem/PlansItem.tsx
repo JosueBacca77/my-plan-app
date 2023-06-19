@@ -24,9 +24,9 @@ export default function PlansItem(plansItemProps: PlansItemProps) {
                         }} p="5" rounded="8" shadow={3} borderWidth="1" borderColor="coolGray.300"
                     >
                         <Flex alignItems="center" justifyContent="space-between" height={16}>
-                            <Text value={plan.fromDate}/>
-                            <Text value="al"/>
-                            <Text value={plan.toDate}/>
+                            <Text value={plan.fromDate} />
+                            <Text value="al" />
+                            <Text value={plan.toDate} />
                         </Flex>
                     </Box>
                 }}

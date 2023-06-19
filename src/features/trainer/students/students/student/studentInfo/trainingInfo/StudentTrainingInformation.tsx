@@ -20,30 +20,35 @@ export default function StudentTrainingInformation(studentTrainingInformationPro
                 marginTop: 20,
             }}
         >
-            <TrainingSection
-                title="Condiciones médicas"
-            >
-                {medicalConditions.map((condition: string) => (
-                    <Text
-                        value={condition}
-                        variant={FontVariant.TEXT_SM}
-                        fontColor={theme.colors.primary[50]}
-                    />
-                ))}
-            </TrainingSection>
-
-            <TrainingSection
-                title="Planes"
-                flex={1}
-            >
-                <Plans plans={plans} />
-                <HStack justifyContent="space-evenly" padding={6}>
-                    <SecondaryButton
-                        text="Nuevo plan"
-                        onPress={() => console.log('')}
-                    />
-                </HStack>
-            </TrainingSection>
+            {
+                medicalConditions.length > 0 &&
+                <TrainingSection
+                    title="Condiciones médicas"
+                >
+                    {medicalConditions.map((condition: string) => (
+                        <Text
+                            value={condition}
+                            variant={FontVariant.TEXT_SM}
+                            fontColor={theme.colors.primary[50]}
+                        />
+                    ))}
+                </TrainingSection>
+            }
+            {
+                plans.length > 0 &&
+                <TrainingSection
+                    title="Planes"
+                    flex={1}
+                >
+                    <Plans plans={plans} />
+                    <HStack justifyContent="space-evenly" padding={6}>
+                        <SecondaryButton
+                            text="Nuevo plan"
+                            onPress={() => console.log('')}
+                        />
+                    </HStack>
+                </TrainingSection>
+            }
         </Flex>
     )
 }

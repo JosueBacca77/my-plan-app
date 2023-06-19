@@ -1,4 +1,4 @@
-import { Modal as NativeBaseModal } from "native-base";
+import { Box, Modal as NativeBaseModal, View } from "native-base";
 import { ReactNode } from "react";
 import { StyleSheet } from "react-native"
 import FormFooter from "../FormFooter/FormFooter";
@@ -8,7 +8,7 @@ import { BUTTON_TYPE } from "../../configs/button";
 type ModalTypes = {
     modalVisible: boolean,
     setModalVisible: (value: boolean) => void,
-    header: string,
+    header?: string,
     cancelText?: string,
     submitText?: string,
     onSubmit?: () => void,
@@ -19,8 +19,14 @@ const Modal = ({ modalVisible, setModalVisible, header, cancelText, submitText, 
     return (
         <NativeBaseModal safeAreaTop={true} isOpen={modalVisible} onClose={() => setModalVisible(false)} avoidKeyboard justifyContent="flex-end" bottom="4" size="lg">
             <NativeBaseModal.Content style={styles.center}>
-                <NativeBaseModal.CloseButton />
-                <NativeBaseModal.Header>{header}</NativeBaseModal.Header>
+                {
+                    header &&
+                    <NativeBaseModal.CloseButton />
+                }
+                {
+                    header &&
+                    <NativeBaseModal.Header>{header}</NativeBaseModal.Header>
+                }
                 <NativeBaseModal.Body>
                     {children}
                 </NativeBaseModal.Body>

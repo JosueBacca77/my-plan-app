@@ -1,8 +1,8 @@
 import { StudentProps } from "./types";
-import StudentInfo from "./studentInfo/StudentInfo";
 import useStudentsStore from "../../useStudentsStore";
 import { Flex } from "native-base";
 import LeftBackArrow from "../../../../../components/LeftBackArrow/LeftBackArrow";
+import StudentInfo from "./studentInfo/StudentInfo";
 
 
 export default function Student(studentProps: StudentProps) {
