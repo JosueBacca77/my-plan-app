@@ -18,15 +18,6 @@ const genesisTheme = extendTheme({
     },
     secondary:{
       100:'#FEC287'
-      //Targets colors
-      // 100: '#D5CA19',
-      // 200: '#8EC916',
-      // 300: '#249C0B',
-      // 400: '#1FA9B2',
-      // 500: '#1465B1', 
-      // 600: '#3E0D7D',
-      // 700: '#A70612',
-      // 800: '#EF6C00',
     },
   },
   // Set the default text color to white

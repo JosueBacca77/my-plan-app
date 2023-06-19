@@ -1,6 +1,8 @@
 import { PlansItemProps } from "./types";
 import { Pressable, Box, Flex } from "native-base";
 import Text from "../../../../../../../../../components/Text/Text";
+import { FontVariant } from "../../../../../../../../../components/Text/types";
+import getTargetColor from "../../../../../../../../../utils/helpers";
 
 
 export default function PlansItem(plansItemProps: PlansItemProps) {
@@ -21,9 +23,17 @@ export default function PlansItem(plansItemProps: PlansItemProps) {
                             transform: [{
                                 scale: isPressed ? 0.96 : 1
                             }]
-                        }} p="5" rounded="8" shadow={3} borderWidth="1" borderColor="coolGray.300"
+                        }} rounded="8" shadow={3} borderWidth="1" borderColor="coolGray.300"
+                        p="3"
+                        paddingTop={2}
+                        width={150}
                     >
-                        <Flex alignItems="center" justifyContent="space-between" height={16}>
+                        <Flex alignItems="center" justifyContent="space-between" >
+                            <Text 
+                                value={plan.target} 
+                                fontColor={getTargetColor(plan.target)}
+                                style={{height:26, textAlign:'center'}}
+                            />
                             <Text value={plan.fromDate} />
                             <Text value="al" />
                             <Text value={plan.toDate} />

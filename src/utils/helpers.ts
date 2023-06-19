@@ -1,32 +1,28 @@
-import { useTheme } from "native-base";
-
 export default function getTargetColor(target: string) {
-    const theme = useTheme();
 
     switch (target) {
-
-        case 'Composición corporal y estética':
-            return (theme.colors.secondary[100])
+        case 'Salud general':
+            return ('#FC9834')
 
         case 'Aptitud funcional':
-            return (theme.colors.secondary[200])
+            return ('#8EC916')
 
-        case 'Salud general':
-            return (theme.colors.secondary[300])
+        case 'Deporte':
+            return ('#249C0B')
 
         case 'Resistencia':
-            return (theme.colors.secondary[400])
+            return ('#1FA9B2')
 
-        case 'Fortalecer':
-            return (theme.colors.secondary[500])
+        case 'Pérdida de peso':
+            return ('#1465B1')
         
-        case 'Deporte':
-            return (theme.colors.secondary[600])
+        case 'Fuerza':
+            return ('#3E0D7D')
 
-        case 'Tonificar':
-            return (theme.colors.secondary[700])
+        case 'Composición corporal':
+            return ('#A70612')
 
         default:
-            return (theme.colors.secondary[200])
+            return ('#000')
     }
 }
