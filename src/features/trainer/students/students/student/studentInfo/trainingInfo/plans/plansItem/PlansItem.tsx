@@ -7,11 +7,11 @@ import getTargetColor from "../../../../../../../../../utils/helpers";
 
 export default function PlansItem(plansItemProps: PlansItemProps) {
 
-    const { plan } = plansItemProps;
+    const { plan, onPressPlan } = plansItemProps;
 
     return (
         <Box alignItems="center" marginRight={4} marginBottom={4} flex={1} key={plan.id} >
-            <Pressable maxW="96">
+            <Pressable maxW="96" onPress={()=> onPressPlan(plan)}>
                 {({
                     isHovered,
                     isFocused,

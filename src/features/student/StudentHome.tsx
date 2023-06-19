@@ -19,6 +19,10 @@ const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
 const StudentHome: React.FC<Props> =(props)=>{
 
+    // export const getHP = (percentage: number) => {
+    //     return Dimensions.get('window').height * (percentage / 100);
+    //   };
+
     const theme = useTheme()
     const { setStudent } = useStudentStore();
     const muscularGroups = [
@@ -197,7 +201,7 @@ const StudentHome: React.FC<Props> =(props)=>{
         fromDate: '15/06/2022',
         toDate: '14/07/2022',
         target: 'Resistencia',
-        muscularGroups: muscularGroupsPlan1,
+        muscularGroups: muscularGroupsPlan2,
         current: true
     }
 
