@@ -75,17 +75,22 @@ const StudentHome: React.FC<Props> =(props)=>{
         {
             id: '1',
             exersice: exercises[0],
-            description: '3/15'
+            description: '3/15',
+            days: [1,2]
         },
         {
             id: '2',
             exersice: exercises[1],
-            description: '4/15 5"'
+            description: '4/15 5"',
+            days: [2]
+
         },
         {
             id: '3',
             exersice: exercises[2],
-            description: '4/15 en colchoneta'
+            description: '4/15 en colchoneta',
+            days: [3]
+
         },
     ]
 
@@ -93,17 +98,21 @@ const StudentHome: React.FC<Props> =(props)=>{
         {
             id: '3',
             exersice: exercises[0],
-            description: '4/10'
+            description: '4/10',
+            days: [2, 3]
         },
         {
             id: '4',
             exersice: exercises[1],
-            description: '3/12'
+            description: '3/12',
+            days: [1, 3]
+
         },
         {
             id: '5',
             exersice: exercises[2],
-            description: '3/10 + 5" arriba'
+            description: '3/10 + 5" arriba',
+            days: [1]
         },
     ]
 
@@ -111,17 +120,20 @@ const StudentHome: React.FC<Props> =(props)=>{
         {
             id: '6',
             exersice: exercises[0],
-            description: '4/12 + 5"'
+            description: '4/12 + 5"',
+            days: [1]
         },
         {
             id: '7',
             exersice: exercises[1],
-            description: '3/15"'
+            description: '3/15"',
+            days: [2]
         },
         {
             id: '8',
             exersice: exercises[2],
-            description: '4/15 en colchoneta + 20" a la mitad'
+            description: '4/15 en colchoneta + 20" a la mitad',
+            days: [3]
         },
     ]
 
@@ -129,17 +141,20 @@ const StudentHome: React.FC<Props> =(props)=>{
         {
             id: '9',
             exersice: exercises[0],
-            description: '4/10'
+            description: '4/10',
+            days: [1, 2]
         },
         {
             id: '10',
             exersice: exercises[1],
-            description: '3/12'
+            description: '3/12',
+            days: [2, 3]
         },
         {
             id: '11',
             exersice: exercises[2],
-            description: '3/10 + 5" arriba'
+            description: '3/10 + 5" arriba',
+            days: [3]
         },
     ]
 

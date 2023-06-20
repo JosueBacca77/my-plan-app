@@ -7,8 +7,7 @@ export default function PlanContent(planProps: PlanContentProps) {
     const { muscularGroups } = planProps;
 
     const m = [...muscularGroups
-        , ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups
-        , ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups
+        //, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups
     ]
 
     return (

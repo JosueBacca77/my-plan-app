@@ -9,7 +9,7 @@ export default function Plan(planProps: PlanProps) {
 
     return (
         <Flex flex={1}>
-            <PlanHeader fromDate={plan.fromDate} toDate={plan.toDate} />
+            <PlanHeader fromDate={plan.fromDate} toDate={plan.toDate} days={[1,2,3]}/>
             <PlanContent muscularGroups={plan.muscularGroups} />
         </Flex>
     )
