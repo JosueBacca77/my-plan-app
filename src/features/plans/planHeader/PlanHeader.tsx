@@ -1,11 +1,11 @@
 import { Flex, Pressable, useTheme } from "native-base";
 import { PlanHeaderProps } from "./types";
 import Text from "../../../components/Text/Text";
-import { useState } from "react";
+
 
 export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
 
-    const { toDate, fromDate, days } = planHeaderProps;
+    const { toDate, fromDate, days, selectedDay, onChangedDay } = planHeaderProps;
 
     const theme = useTheme();
 
@@ -30,10 +30,14 @@ export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
                 {
                     days.map(day => {
 
-                        const [isSelected, setIsSelected] = useState(false);
+                        const isSelected = selectedDay === day;
+
+                        const handlePressDay =()=> {
+                            onChangedDay(isSelected ? null : day);
+                        };
 
                         return (
-                            <Pressable onPress={()=>setIsSelected(prev=> !prev)}>
+                            <Pressable onPress={handlePressDay}>
                                 {({
                                     isHovered,
                                     isFocused,

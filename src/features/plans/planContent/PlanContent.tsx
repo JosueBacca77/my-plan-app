@@ -4,18 +4,16 @@ import PlanMuscularGroup from "./planMuscularGroup/PlanMuscularGroup";
 
 export default function PlanContent(planProps: PlanContentProps) {
 
-    const { muscularGroups } = planProps;
+    const { muscularGroups, selectedDay } = planProps;
 
-    const m = [...muscularGroups
-        //, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups, ...muscularGroups
-    ]
+    const m = [...muscularGroups]
 
     return (
         <FlatList
             data={m}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
-                <PlanMuscularGroup muscularGroup={item} />
+                <PlanMuscularGroup muscularGroup={item} selectedDay={selectedDay} />
             )}
         />
     )

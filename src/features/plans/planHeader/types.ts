@@ -1,5 +1,9 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface PlanHeaderProps {
     fromDate: string;
     toDate: string;
-    days: number[]
+    days: number[],
+    selectedDay: number | null;
+    onChangedDay: (day: number | null)=> void
 }
