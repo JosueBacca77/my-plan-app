@@ -26,6 +26,7 @@ export default function Plan(planProps: PlanProps) {
             <PlanHeader
                 fromDate={plan.fromDate}
                 toDate={plan.toDate}
+                target={plan.target}
                 days={allDays}
                 selectedDay={selectedDay}
                 onChangedDay={onChangeDay}

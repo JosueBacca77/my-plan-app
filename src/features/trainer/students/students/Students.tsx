@@ -157,7 +157,7 @@ export default function Students() {
         id: '1',
         fromDate: '15/06/2022',
         toDate: '14/07/2022',
-        target: 'Tonificar',
+        target: 'Composición corporal',
         muscularGroups: muscularGroupsPlan1,
         current: true
     }
@@ -166,7 +166,7 @@ export default function Students() {
         id: '2',
         fromDate: '18/07/2022',
         toDate: '15/08/2022',
-        target: 'Tonificar',
+        target: 'Deporte',
         muscularGroups: muscularGroupsPlan2,
         current: false
     }
@@ -175,7 +175,7 @@ export default function Students() {
         id: '3',
         fromDate: '16/08/2022',
         toDate: '21/09/2022',
-        target: 'Tonificar',
+        target: 'Aptitud funcional',
         muscularGroups: muscularGroupsPlan2,
         current: false
     }

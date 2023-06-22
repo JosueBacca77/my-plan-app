@@ -16,7 +16,7 @@ export default function PlanMuscularGroup(planMuscularGroupProps: PlanMuscularGr
 
     return (
         <Box marginBottom={4}>
-            <Text value={muscularGroup.muscularGroup.name} variant={FontVariant.TEXT_LG} />
+            <Text value={muscularGroup.muscularGroup.name} variant={FontVariant.TEXT_SM} />
             <Flex flex={1}>
                 {
                     dayExersices.map((exercise) => (

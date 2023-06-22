@@ -2,5 +2,5 @@ import { PlanInterface } from "../../../../../../../../../interfaces/plan/Plan.i
 
 export interface PlansItemProps {
     plan: PlanInterface;
-    onPressPlan: (plan: PlanInterface)=> void;
+    onPressPlan?: (plan: PlanInterface)=> void;
 }
