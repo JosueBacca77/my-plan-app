@@ -19,8 +19,8 @@ export default function PlanMuscularGroup(planMuscularGroupProps: PlanMuscularGr
             <Text value={muscularGroup.muscularGroup.name} variant={FontVariant.TEXT_SM} />
             <Flex flex={1}>
                 {
-                    dayExersices.map((exercise) => (
-                        <Flex flex={1} flexDirection='row' marginBottom={2}>
+                    dayExersices.map((exercise, index) => (
+                        <Flex flex={1} flexDirection='row' marginBottom={2} key={index}>
                             <Flex flex={1} flexDirection='row'>
                                 <Text value={exercise.exersice.name} style={{ marginRight: 4 }} />
                                 <Text value={exercise.description} />
@@ -31,6 +31,7 @@ export default function PlanMuscularGroup(planMuscularGroupProps: PlanMuscularGr
                                     {
                                         exercise.days.map(day => (
                                             <View
+                                                key={day.toString()}
                                                 style={{
                                                     backgroundColor: theme.colors.primary[500],
                                                     borderRadius: 20,
@@ -43,6 +44,7 @@ export default function PlanMuscularGroup(planMuscularGroupProps: PlanMuscularGr
                                                 }}
                                             >
                                                 <Text
+                                                    key={day.toString()}
                                                     value={day.toString()}
                                                     fontColor={theme.colors.primary[50]}
                                                 />

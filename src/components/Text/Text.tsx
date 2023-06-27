@@ -9,7 +9,6 @@ export default function Text(textProps: TextProps) {
 
     return (
         <NativeBaseText
-            key={value}
             color={fontColor}
             fontSize={fontSize}
             lineHeight={lineHeight}

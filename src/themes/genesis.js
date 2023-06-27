@@ -12,12 +12,14 @@ const genesisTheme = extendTheme({
       400: '#FFA726',
       500: '#EF9223', // Main color
       600: '#FB8C00',
-      700: '#F57C00',
+      700: '#F57C00', //pressed
       800: '#EF6C00',
       900: '#E65100',
     },
     secondary:{
-      100:'#FEC287'
+      50: '#FEC287', //background
+      500:"#F6E9C3",//main secondary
+      700: '#E89E2B' //pressed
     },
   },
   // Set the default text color to white

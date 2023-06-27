@@ -1,4 +1,4 @@
-import { Flex, Pressable, useTheme,View } from "native-base";
+import { Flex, Pressable, useTheme } from "native-base";
 import { PlanHeaderProps } from "./types";
 import Text from "../../../components/Text/Text";
 import getTargetColor from "../../../utils/helpers";
@@ -30,11 +30,11 @@ export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
             </Flex>
 
             <Flex flexDirection='row' justifyContent={'space-between'} paddingY={1}>
-                            <Text value={target} fontColor={getTargetColor(target)} variant={FontVariant.TEXT_LG}/>
+                <Text value={target} fontColor={getTargetColor(target)} variant={FontVariant.TEXT_LG} />
 
-            <Flex flexDirection={'row'} >
-                {
-                    days.map(day => {
+                <Flex flexDirection={'row'} >
+                    {
+                        days.map(day => {
 
                             const isSelected = selectedDay === day;
 
@@ -43,13 +43,14 @@ export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
                             };
 
                             return (
-                                <Pressable onPress={handlePressDay}>
+                                <Pressable onPress={handlePressDay} key={day.toString()}>
                                     {({
                                         isHovered,
                                         isFocused,
                                         isPressed
                                     }) => {
                                         return <Flex
+                                            key={day.toString()}
                                             justifyContent='center'
                                             flexDirection='row'
                                             alignItems='center'
@@ -66,6 +67,7 @@ export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
                                             height={6}
                                         >
                                             <Text
+                                                key={day.toString()}
                                                 value={day.toString()}
                                                 fontColor={isSelected ? theme.colors.primary[50] : theme.colors.primary[500]}
                                             />
@@ -76,7 +78,7 @@ export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
                         })
                     }
                 </Flex>
-                </Flex>
+            </Flex>
 
         </Flex>
     )

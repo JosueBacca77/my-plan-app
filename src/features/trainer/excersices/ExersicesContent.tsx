@@ -55,7 +55,7 @@ const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
                 }} mt={1} onValueChange={handleMuscularGroupChange}>
             {
                 muscularGroups.map((group: MuscularGroup)=>(
-                    <Select.Item label={group.name} value={group.name} />
+                    <Select.Item key={group.name} label={group.name} value={group.name} />
                 ))
             }
             </Select>

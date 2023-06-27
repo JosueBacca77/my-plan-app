@@ -32,6 +32,7 @@ export default function StudentInfo(studentInfoProps: StudentInfoProps) {
                     </Flex>
                     :
                     <Text
+                        key={'error_load_student_text'}
                         value='Error al cargar alumno'
                     />
             }

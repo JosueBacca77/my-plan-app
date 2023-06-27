@@ -4,7 +4,7 @@ export interface TextProps {
     variant?: FontVariant,
     value: string,
     fontWeight?: string,
-    style?: StyleProp<TextStyle>
+    style?: StyleProp<TextStyle>;
 }
 
 export enum FontVariant {

@@ -16,7 +16,7 @@ export default function StudentTrainingInformation(studentTrainingInformationPro
         <Flex
             flex={1}
             style={{
-                backgroundColor: theme.colors.secondary[100],
+                backgroundColor: theme.colors.secondary[50],
                 marginTop: 20,
             }}
         >
@@ -25,8 +25,9 @@ export default function StudentTrainingInformation(studentTrainingInformationPro
                 <TrainingSection
                     title="Condiciones médicas"
                 >
-                    {medicalConditions.map((condition: string) => (
+                    {medicalConditions.map((condition: string, index: number) => (
                         <Text
+                            key={index}
                             value={condition}
                             variant={FontVariant.TEXT_SM}
                             fontColor={theme.colors.primary[50]}

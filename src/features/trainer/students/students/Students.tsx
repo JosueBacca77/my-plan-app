@@ -195,7 +195,7 @@ export default function Students() {
     useEffect(() => {
         const students = [
             student1,
-            { id: '2', name: "Romero Carla", age: 26, target: 'Disminuir grasa', height: 1.63, weight: 60, image: "https://wallpaperaccess.com/full/317503.jpg", medicalConditions:['Hipertensión'], plans:[] },
+            { id: '2', name: "Ferreira Carla", age: 26, target: 'Disminuir grasa', height: 1.63, weight: 60, image: "https://wallpaperaccess.com/full/317503.jpg", medicalConditions:['Hipertensión'], plans:[] },
             { id: '3', name: "Albertinazi Juan", age: 19, target: 'Tonificar', height: 1.93, weight: 86, image: "https://wallpaperaccess.com/full/317504.jpg", medicalConditions:[], plans:[] },
             { id: '4', name: "Acosta Alberto", age: 40, target: 'Acondicionar', height: 1.83, weight: 80, image: "https://wallpaperaccess.com/full/317516.jpg", medicalConditions:[], plans:[] },
             { id: '5', name: "Falcone Jesus", age: 22, target: 'Disminuir grasa', image: "https://wallpaperaccess.com/full/317517.jpg", medicalConditions:['Hernia de disco'], plans:[] },
