@@ -1,3 +1,5 @@
+import { Dimensions } from "react-native"
+
 export default function getTargetColor(target: string) {
 
     switch (target) {
@@ -15,7 +17,7 @@ export default function getTargetColor(target: string) {
 
         case 'Pérdida de peso':
             return ('#1465B1')
-        
+
         case 'Fuerza':
             return ('#3E0D7D')
 
@@ -25,4 +27,12 @@ export default function getTargetColor(target: string) {
         default:
             return ('#000')
     }
-}
+};
+
+export const getHP = (percentage: number) => {
+    return Dimensions.get('window').height * (percentage / 100);
+};
+
+export const getWP = (percentage: number) => {
+    return Dimensions.get('window').width * (percentage / 100);
+};

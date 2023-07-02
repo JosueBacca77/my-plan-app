@@ -8,6 +8,7 @@ export interface TextProps {
 }
 
 export enum FontVariant {
+    TEXT_10 = 'TEXT_10',
     TEXT_XS = 'TEXT_XS',
     TEXT_SM = 'TEXT_SM',
     TEXT_LG = 'TEXT_LG',
@@ -19,6 +20,8 @@ export enum FontVariant {
   
   export const getFontSize = (variant: FontVariant): number | undefined => {
     switch (variant) {
+      case FontVariant.TEXT_10:
+        return 10;
       case FontVariant.TEXT_XS:
         return 12;
       case FontVariant.TEXT_SM:
@@ -40,6 +43,8 @@ export enum FontVariant {
   
   export const getLineHeight = (variant: FontVariant): number | undefined => {
     switch (variant) {
+      case FontVariant.TEXT_10:
+        return 12;
       case FontVariant.TEXT_XS:
         return 16;
       case FontVariant.TEXT_SM:
