@@ -8,20 +8,16 @@ import useStudentStore from "./useStudentStore";
 
 interface Props {
     // add any additional props here
-  }
+}
 
 type RootDrawerParamList = {
     Students: undefined;
     // Profile: { userId: string };
-  };
+};
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
-const StudentHome: React.FC<Props> =(props)=>{
-
-    // export const getHP = (percentage: number) => {
-    //     return Dimensions.get('window').height * (percentage / 100);
-    //   };
+const StudentHome: React.FC<Props> = (props) => {
 
     const theme = useTheme()
     const { setStudent } = useStudentStore();
@@ -76,7 +72,7 @@ const StudentHome: React.FC<Props> =(props)=>{
             id: '1',
             exersice: exercises[0],
             description: '3/15',
-            days: [1,2]
+            days: [1, 2]
         },
         {
             id: '2',
@@ -261,27 +257,24 @@ const StudentHome: React.FC<Props> =(props)=>{
 
     useEffect(() => {
         setStudent(student1);
-      }, [setStudent]); 
+    }, [setStudent]);
 
-    return(
-        <NavigationContainer>
-            <Drawer.Navigator
-                screenOptions={{
-                    headerTintColor: theme.colors.white, // Change this color for the header icon,
-                    drawerActiveBackgroundColor:theme.colors.primary[500],
-                    drawerActiveTintColor:theme.colors.primary[50],
-                    headerTitleStyle:{
-                        color:theme.colors.white,
-                    },
-                    headerStyle:{
-                        backgroundColor: theme.colors.primary[500]
-                    },
-                }}
-            >
-                <Drawer.Screen name='Planes' component={StudentPlans} />
-                {/* <Drawer.Screen name='Mi perfil' component={MuscularGroups} /> */}
-            </Drawer.Navigator>
-        </NavigationContainer>
+    return (
+        <Drawer.Navigator
+            screenOptions={{
+                headerTintColor: theme.colors.white, // Change this color for the header icon,
+                drawerActiveBackgroundColor: theme.colors.primary[500],
+                drawerActiveTintColor: theme.colors.primary[50],
+                headerTitleStyle: {
+                    color: theme.colors.white,
+                },
+                headerStyle: {
+                    backgroundColor: theme.colors.primary[500]
+                },
+            }}
+        >
+            <Drawer.Screen name='Planes' component={StudentPlans} />
+        </Drawer.Navigator>
     )
 }
 

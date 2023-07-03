@@ -4,7 +4,7 @@ import { Input } from "native-base";
 
 
 export default function PrimaryInputText(primaryProps: PrimaryInputTextProps) {
-    const { onChangeText, placeholder, size } = primaryProps;
+    const { onChangeText, placeholder, size, autoCapitalize } = primaryProps;
 
     const [currentvalue, setCurrentValue] = useState<string>('')
 
@@ -20,6 +20,7 @@ export default function PrimaryInputText(primaryProps: PrimaryInputTextProps) {
             placeholder={placeholder}
             value={currentvalue}
             size={size}
+            autoCapitalize={autoCapitalize ?? "characters"}
             style={{ paddingLeft: 10 }}
         />
     )

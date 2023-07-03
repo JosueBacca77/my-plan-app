@@ -3,10 +3,10 @@ import StudentItem from "./studentItem/StudentItem";
 import { useState } from "react";
 import MainContainer from "../../../../../components/MainContainer/MainContainer";
 import useStudentsStore from '../../useStudentsStore';
-import { StudentsNavigationProps } from "../types";
+import { ReactNavigationProps } from "../../../../../lib/ReactNavigation/types";
 
 
-export default function StudentsList(studentsNavigationProp: StudentsNavigationProps) {
+export default function StudentsList(studentsNavigationProp: ReactNavigationProps) {
 
     const { navigation } = studentsNavigationProp;
 

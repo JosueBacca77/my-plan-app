@@ -5,7 +5,7 @@ import { InputTextProps, InputTextVariant } from "./types";
 
 export default function InputText(InputTextProps: InputTextProps) {
 
-    const { variant, onChangeText, placeholder, size, style } = InputTextProps;
+    const { variant, onChangeText, placeholder, size, style, autoCapitalize } = InputTextProps;
 
     const getTypeInputText = (variant: InputTextVariant | undefined) => {
         switch (variant) {
@@ -16,6 +16,7 @@ export default function InputText(InputTextProps: InputTextProps) {
                         placeholder={placeholder}
                         size={size}
                         style={style}
+                        autoCapitalize={autoCapitalize}
                     />
                 );
             case InputTextVariant.PASSWORD:
@@ -34,6 +35,7 @@ export default function InputText(InputTextProps: InputTextProps) {
                         placeholder={placeholder}
                         size={size}
                         style={style}
+                        autoCapitalize={autoCapitalize}
                     />
                 );
         }

@@ -9,7 +9,7 @@ import InputText from "../InputText/InputText";
 
 export default function FormikInputValue(formikInputProps: FormikInputProps) {
 
-    const { name, placeholder, variant, size } = formikInputProps;
+    const { name, placeholder, variant, size, autoCapitalize } = formikInputProps;
 
     const [field, meta, helpers] = useField(name);
 
@@ -23,8 +23,9 @@ export default function FormikInputValue(formikInputProps: FormikInputProps) {
                 style={styles.formikInput}
                 variant={variant ?? InputTextVariant.PRIMARY}
                 size={size}
-            />
-            {meta.error &&
+                autoCapitalize={autoCapitalize}
+                />
+            {meta.error && meta.touched &&
                 <View style={styles.error}>
                     <Text
                         variant={FontVariant.TEXT_10}

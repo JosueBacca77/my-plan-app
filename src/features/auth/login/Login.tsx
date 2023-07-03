@@ -9,8 +9,15 @@ import { LoginFields } from "./types";
 import { StyleSheet } from "react-native";
 import { getHP, getWP } from "../../../utils/helpers";
 import { InputTextVariant } from "../../../components/InputText/types";
+import { ReactNavigationProps } from "../../../lib/ReactNavigation/types";
+import useUserStore from "../useUserStore";
 
-export default function Login() {
+
+export default function Login(navigationProps: ReactNavigationProps) {
+
+    const { navigation } = navigationProps;
+
+    const { setUser } = useUserStore();
 
     const initialValues = {
         username: '',
@@ -18,7 +25,14 @@ export default function Login() {
     };
 
     const onSubmit = (data: LoginFields) => {
-        console.log('sumbit', data)
+        if (data.username === 'student' && data.password === 'Test1234$') {
+            setUser(true);
+            navigation.push('PrivateRouter');
+        }
+        if (data.username === 'trainer' && data.password === 'Test1234$') {
+            setUser(false);
+            navigation.push('PrivateRouter');
+        }
     };
 
     return (
@@ -34,6 +48,7 @@ export default function Login() {
                             placeholder="Usuario"
                             name='username'
                             size="lg"
+                            autoCapitalize="none"
                         />
                         <FormikInputValue
                             placeholder="Contraseña"
@@ -42,11 +57,11 @@ export default function Login() {
                             size="lg"
                         />
                         <View style={styles.loginSubmit}>
-                        <Button
-                            onPress={handleSubmit}
-                            text={LOGIN_TEXT}
-                            variant={BUTTON_TYPE.SUBMIT}
-                        />
+                            <Button
+                                onPress={handleSubmit}
+                                text={LOGIN_TEXT}
+                                variant={BUTTON_TYPE.SUBMIT}
+                            />
                         </View>
 
                     </Flex>
@@ -57,11 +72,11 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
-    loginContainer:{
+    loginContainer: {
         marginTop: getHP(20),
         marginHorizontal: getWP(10)
     },
     loginSubmit: {
-        marginTop:getHP(10)
+        marginTop: getHP(6)
     }
 })

@@ -10,5 +10,6 @@ export interface InputTextProps {
     placeholder:string;
     variant?: InputTextVariant;
     size?: string;
-    style?: ViewStyle
+    style?: ViewStyle;
+    autoCapitalize?: 'characters' | 'none' | 'senteces' | 'words';
 }

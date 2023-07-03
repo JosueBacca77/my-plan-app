@@ -4,5 +4,6 @@ export interface PrimaryInputTextProps {
     onChangeText?:(value:string)=>void,
     placeholder:string;
     size?: string;
-    style?: ViewStyle
+    style?: ViewStyle;
+    autoCapitalize?: 'characters' | 'none' | 'senteces' | 'words';
 }

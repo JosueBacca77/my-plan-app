@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ButtonProps } from "./types";
 import { BUTTON_TYPE } from "../../configs/button";
 import Text from "../Text/Text";
+import { FontVariant } from "../Text/types";
 
 
 export default function Button(primaryButtonProps: ButtonProps) {
@@ -38,6 +39,7 @@ export default function Button(primaryButtonProps: ButtonProps) {
                     value={text}
                     fontColor={theme.colors.primary[50]}
                     fontWeight="bold"
+                    variant={FontVariant.TEXT_SM}
                 />
             </NativeBaseButton>
         </View>
