@@ -4,11 +4,13 @@ import Plan from "../../plans/Plan";
 import useStudentStore from "../useStudentStore";
 import StudentCarouselPlans from "./StudentCarouselPlans/StudentCarouselPlans";
 
+
 export default function StudentPlans(){
 
     const { student, selectedPlan } = useStudentStore();
 
     const plans = student ? student.plans : [];
+    console.log('STUDENT PLANS')
 
     return(
         <MainContainer>

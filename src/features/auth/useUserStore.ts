@@ -1,12 +1,12 @@
 import { create } from 'zustand';
 
 type UserStore = {
-  user: boolean;
-  setUser: (user: boolean) => void;
+  user: boolean | null;
+  setUser: (user: boolean | null) => void;
 };
 
 const useUserStore = create<UserStore>((set) => ({
-  user: false,
+  user: null,
   setUser: (user) => set((state) => ({ ...state, user: user })),
 }));
 

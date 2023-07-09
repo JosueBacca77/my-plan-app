@@ -2,10 +2,14 @@ import PublicRouter from "./features/routers/PublicRouter";
 import PrivateRouter from "./features/routers/PrivateRouter";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import useUserStore from "./features/auth/useUserStore";
+
 
 const MainRouter = () => {
 
     const Stack = createStackNavigator();
+
+    const { user } = useUserStore();
 
     return (
         <NavigationContainer>
@@ -14,12 +18,19 @@ const MainRouter = () => {
                     headerShown: false
                 }}
             >
-                <Stack.Screen name="PublicRouter"
-                    component={PublicRouter}
-                />
-                <Stack.Screen name="PrivateRouter"
-                    component={PrivateRouter}
-                />
+                {
+                    user === null &&
+                    <Stack.Screen name="PublicRouter"
+                        component={PublicRouter}
+                    />
+
+                }
+                {
+                    user !== null &&
+                    <Stack.Screen name="PrivateRouter"
+                        component={PrivateRouter}
+                    />
+                }
             </Stack.Navigator>
         </NavigationContainer>
     )

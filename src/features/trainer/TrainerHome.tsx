@@ -1,24 +1,20 @@
 
-import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { MuscularGroups } from "./muscularGroups";
 import { Exersices } from "./excersices";
 import { useTheme } from "native-base";
 import Students from "./students/students/Students";
 import React from 'react';
+import MyProfile from '../user/MyProfile';
 
-interface Props {
-    // add any additional props here
-}
 
 type RootDrawerParamList = {
     Students: undefined;
-    // Profile: { userId: string };
 };
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
-const TrainerHome: React.FC<Props> = (props) => {
+export default function TrainerHome(){
 
     const theme = useTheme()
 
@@ -39,8 +35,7 @@ const TrainerHome: React.FC<Props> = (props) => {
             <Drawer.Screen name='Alumnos' component={Students} />
             <Drawer.Screen name='Grupos Musculares' component={MuscularGroups} />
             <Drawer.Screen name="Ejercicios" component={Exersices} />
+            <Drawer.Screen name="Mi perfil" component={MyProfile} />
         </Drawer.Navigator>
     )
 }
-
-export default TrainerHome;

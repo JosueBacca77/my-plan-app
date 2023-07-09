@@ -1,7 +1,7 @@
 
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "../auth/login/Login";
-import SignUp from "../auth/signUp/SignUp";
+
 
 export default function PublicRouter() {
 
@@ -15,9 +15,6 @@ export default function PublicRouter() {
         >
             <Stack.Screen name="Login"
                 component={Login} 
-            />
-            <Stack.Screen name="SignUp"
-                component={SignUp}
             />
         </Stack.Navigator>
     )

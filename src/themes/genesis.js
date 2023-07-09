@@ -18,6 +18,7 @@ const genesisTheme = extendTheme({
     },
     secondary:{
       50: '#FEC287', //background
+      100: '#AAAAAA',//light text
       500:"#F6E9C3",//main secondary
       700: '#E89E2B' //pressed
     },

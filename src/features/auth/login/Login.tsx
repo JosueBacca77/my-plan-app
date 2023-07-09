@@ -26,12 +26,12 @@ export default function Login(navigationProps: ReactNavigationProps) {
 
     const onSubmit = (data: LoginFields) => {
         if (data.username === 'student' && data.password === 'Test1234$') {
-            setUser(true);
-            navigation.push('PrivateRouter');
+            setUser(false);
+            navigation.navigate('PrivateRouter');
         }
         if (data.username === 'trainer' && data.password === 'Test1234$') {
-            setUser(false);
-            navigation.push('PrivateRouter');
+            setUser(true);
+            navigation.navigate('PrivateRouter');
         }
     };
 
@@ -45,13 +45,13 @@ export default function Login(navigationProps: ReactNavigationProps) {
                 return (
                     <Flex flex={1} style={styles.loginContainer}>
                         <FormikInputValue
-                            placeholder="Usuario"
+                            placeholder="User"
                             name='username'
                             size="lg"
                             autoCapitalize="none"
                         />
                         <FormikInputValue
-                            placeholder="Contraseña"
+                            placeholder="Password"
                             name='password'
                             variant={InputTextVariant.PASSWORD}
                             size="lg"
@@ -63,7 +63,6 @@ export default function Login(navigationProps: ReactNavigationProps) {
                                 variant={BUTTON_TYPE.SUBMIT}
                             />
                         </View>
-
                     </Flex>
                 )
             }}

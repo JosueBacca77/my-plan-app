@@ -1,4 +1,4 @@
-export const CANCEL_TEXT='Cancelar';
-export const SUBMIT_TEXT='Aceptar';
-export const NEW_EXERCISE='Nuevo ejercicio';
-export const LOGIN_TEXT='Ingresar';
+export const CANCEL_TEXT='Cancel';
+export const SUBMIT_TEXT='Accept';
+export const NEW_EXERCISE='New exercise';
+export const LOGIN_TEXT='Log in';
