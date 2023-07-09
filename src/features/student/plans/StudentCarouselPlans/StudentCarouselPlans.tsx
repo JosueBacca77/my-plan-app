@@ -1,8 +1,8 @@
 import { FlatList } from "native-base";
-import PlansItem from "../../../trainer/students/students/student/studentInfo/trainingInfo/plans/plansItem/PlansItem";
 import { StudentCarouselPlansProps } from "./types";
 import useStudentStore from "../../useStudentStore";
 import { PlanInterface } from "../../../../interfaces/plan/Plan.interface";
+import PlansItem from "../../../trainer/students/student/studentInfo/trainingInfo/plans/plansItem/PlansItem";
 
 export default function StudentCarouselPlans(studentCarouselPlansProps: StudentCarouselPlansProps){
 
@@ -25,4 +25,4 @@ export default function StudentCarouselPlans(studentCarouselPlansProps: StudentC
             keyExtractor={item => item.id.toString()}
         />
     )
-}
+} 13

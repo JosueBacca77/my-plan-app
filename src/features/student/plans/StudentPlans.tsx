@@ -10,7 +10,6 @@ export default function StudentPlans(){
     const { student, selectedPlan } = useStudentStore();
 
     const plans = student ? student.plans : [];
-    console.log('STUDENT PLANS')
 
     return(
         <MainContainer>

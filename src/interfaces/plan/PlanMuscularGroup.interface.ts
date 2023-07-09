@@ -1,8 +1,8 @@
 import { MuscularGroup } from "../MuscularGroup.interface";
-import { PlanExersiceInterface } from "./PlanExersice.interface";
+import { PlanExerciseInterface } from "./PlanExercise.interface";
 
 export interface PlanMuscularGroupInterface {
     id: string;
     muscularGroup: MuscularGroup;
-    exercises: PlanExersiceInterface[];
+    exercises: PlanExerciseInterface[];
   }

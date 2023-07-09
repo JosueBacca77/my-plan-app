@@ -1,10 +1,10 @@
 import { Image, View, useTheme } from "native-base";
 import { StudentPersonalInformationProps } from "./types";
-import { IMAGE_SIZE } from "../../../../../../../configs/image";
-import Text from "../../../../../../../components/Text/Text";
-import { FontVariant } from "../../../../../../../components/Text/types";
 import { StyleSheet } from "react-native";
-import getTargetColor from "../../../../../../../utils/helpers";
+import { IMAGE_SIZE } from "../../../../../../configs/image";
+import Text from "../../../../../../components/Text/Text";
+import { FontVariant } from "../../../../../../components/Text/types";
+import getTargetColor from "../../../../../../utils/helpers";
 
 
 export default function StudentPersonalInformation(studentPersonalInformationProps: StudentPersonalInformationProps) {

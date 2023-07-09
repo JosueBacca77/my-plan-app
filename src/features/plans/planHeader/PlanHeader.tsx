@@ -3,6 +3,7 @@ import { PlanHeaderProps } from "./types";
 import Text from "../../../components/Text/Text";
 import getTargetColor from "../../../utils/helpers";
 import { FontVariant } from "../../../components/Text/types";
+import { FROM, TO } from "../../../configs/constants/strings";
 
 
 export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
@@ -20,11 +21,11 @@ export default function PlanHeader(planHeaderProps: PlanHeaderProps) {
                 }}
             >
                 <Flex flexDirection='row' flex={1} marginBottom={1}>
-                    <Text value='Desde' style={{ marginRight: 3 }} />
+                    <Text value={FROM} style={{ marginRight: 3 }} />
                     <Text value={fromDate} />
                 </Flex>
                 <Flex flexDirection='row' flex={1}>
-                    <Text value='Hasta' style={{ marginRight: 3 }} />
+                    <Text value={TO} style={{ marginRight: 3 }} />
                     <Text value={toDate} />
                 </Flex>
             </Flex>

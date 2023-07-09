@@ -1,9 +1,10 @@
 import { Image, View } from "native-base";
 import { StudentItemProps } from "./types";
 import { StyleSheet, TouchableNativeFeedback } from "react-native";
-import Text from "../../../../../../components/Text/Text";
-import { IMAGE_SIZE } from "../../../../../../configs/image";
-import { FontVariant } from "../../../../../../components/Text/types";
+import { IMAGE_SIZE } from "../../../../../configs/image";
+import Text from "../../../../../components/Text/Text";
+import { FontVariant } from "../../../../../components/Text/types";
+
 
 export default function StudentItem(studentItemProps: StudentItemProps) {
 

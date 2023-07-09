@@ -3,27 +3,27 @@ import { Dimensions } from "react-native"
 export default function getTargetColor(target: string) {
 
     switch (target) {
-        case 'Salud general':
+        case 'General Health':
             return ('#FC9834')
-
-        case 'Aptitud funcional':
+    
+        case 'Functional Fitness':
             return ('#8EC916')
-
-        case 'Deporte':
+    
+        case 'Sports':
             return ('#249C0B')
-
-        case 'Resistencia':
+    
+        case 'Endurance':
             return ('#1FA9B2')
-
-        case 'Pérdida de peso':
+    
+        case 'Weight Loss':
             return ('#1465B1')
-
-        case 'Fuerza':
+    
+        case 'Strength':
             return ('#3E0D7D')
-
-        case 'Composición corporal':
+    
+        case 'Body Composition':
             return ('#A70612')
-
+    
         default:
             return ('#000')
     }

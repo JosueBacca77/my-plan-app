@@ -1,10 +1,11 @@
 import { Flex, HStack, useTheme } from "native-base";
 import { StudentTrainingInformationProps } from "./types";
-import Text from "../../../../../../../components/Text/Text";
-import { FontVariant } from "../../../../../../../components/Text/types";
 import TrainingSection from "./trainingSection/TrainingSection";
-import SecondaryButton from "../../../../../../../components/SecondaryButton/SecondaryButton";
 import Plans from "./plans/Plans";
+import { MEDICAL_CONDITIONS } from "../../../../../../configs/constants/strings";
+import Text from "../../../../../../components/Text/Text";
+import { FontVariant } from "../../../../../../components/Text/types";
+import SecondaryButton from "../../../../../../components/SecondaryButton/SecondaryButton";
 
 
 export default function StudentTrainingInformation(studentTrainingInformationProps: StudentTrainingInformationProps) {
@@ -23,7 +24,7 @@ export default function StudentTrainingInformation(studentTrainingInformationPro
             {
                 medicalConditions.length > 0 &&
                 <TrainingSection
-                    title="Condiciones médicas"
+                    title={MEDICAL_CONDITIONS}
                 >
                     {medicalConditions.map((condition: string, index: number) => (
                         <Text
@@ -38,14 +39,14 @@ export default function StudentTrainingInformation(studentTrainingInformationPro
             {
                 plans.length > 0 &&
                 <TrainingSection
-                    title="Planes"
+                    title="Plans"
                     flex={1}
                 >
                     <Plans plans={plans} />
                     <HStack justifyContent="space-evenly" padding={6}>
                         <SecondaryButton
-                            text="Nuevo plan"
-                            onPress={() => console.log('')}
+                            text="New plan"
+                            onPress={null}
                         />
                     </HStack>
                 </TrainingSection>

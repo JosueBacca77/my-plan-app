@@ -2,14 +2,14 @@ import { Flex } from "native-base";
 import { PlanProps } from "./types";
 import PlanHeader from "./planHeader/PlanHeader";
 import PlanContent from "./planContent/PlanContent";
-import { getAllPlanExersiceDays } from "./common";
+import { getAllPlanExerciseDays } from "./common";
 import { useState } from "react";
 
 export default function Plan(planProps: PlanProps) {
 
     const { plan } = planProps;
 
-    const allDays = getAllPlanExersiceDays(plan);
+    const allDays = getAllPlanExerciseDays(plan);
 
     const [selectedDay, setSelectedDay] = useState<number | null>(null);
 

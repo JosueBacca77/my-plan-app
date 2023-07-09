@@ -1,6 +1,6 @@
 import { PlanInterface } from "../../interfaces/plan/Plan.interface";
 
-export const getAllPlanExersiceDays=(plan: PlanInterface): number[]=> {
+export const getAllPlanExerciseDays=(plan: PlanInterface): number[]=> {
     const days: number[] = [];
   
     plan.muscularGroups.forEach((muscularGroup) => {

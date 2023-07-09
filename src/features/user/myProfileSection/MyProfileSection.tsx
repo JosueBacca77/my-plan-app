@@ -5,8 +5,9 @@ import { Flex, View } from "native-base";
 import { FontVariant } from "../../../components/Text/types";
 import { MyProfileSectionProps } from "./types";
 import { student1 } from "../../../data";
-import { styles } from "../MyProfile";
 import getTargetColor from "../../../utils/helpers";
+import { styles } from "../styles";
+
 
 export default function MyProfileSection(myProfileSectionProps: MyProfileSectionProps) {
 
@@ -25,8 +26,8 @@ export default function MyProfileSection(myProfileSectionProps: MyProfileSection
     }, [section.opened])
 
     return (
-        <TouchableOpacity key={section.name} style={styles.item} onPress={() => handlePressSection(index)}>
-            <Text key={section.name} value={section.name} variant={FontVariant.TEXT_SM} />
+        <TouchableOpacity style={styles.item} onPress={() => handlePressSection(index)}>
+            <Text value={section.name} variant={FontVariant.TEXT_SM} />
             <View
                 style={{
                     height: layoutHeight,
@@ -57,9 +58,9 @@ export default function MyProfileSection(myProfileSectionProps: MyProfileSection
                     section.id === 'medical_conditions' &&
                     <View style={styles.itemContent}>
                         {
-                            student.medicalConditions.map(mc => (
-                                <Flex marginBottom={1}>
-                                    <Text key={mc} value={mc} />
+                            student.medicalConditions.map((mc,index) => (
+                                <Flex key={mc+'_'+index} marginBottom={1}>
+                                    <Text value={mc} />
                                 </Flex>
                             ))
                         }

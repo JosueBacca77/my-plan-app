@@ -6,6 +6,7 @@ import StudentPlans from "./plans/StudentPlans";
 import useStudentStore from "./useStudentStore";
 import MyProfile from '../user/MyProfile';
 import { student1 } from '../../data';
+import { MY_PROFILE, PLANS } from '../../configs/constants/strings';
 
 
 const Drawer = createDrawerNavigator();
@@ -33,8 +34,8 @@ export default function StudentHome(){
                 }
             }}
         >
-            <Drawer.Screen name='Planes' component={StudentPlans} />
-            <Drawer.Screen name='Mi perfil' component={MyProfile} />
+            <Drawer.Screen name={PLANS} component={StudentPlans} />
+            <Drawer.Screen name={MY_PROFILE} component={MyProfile} />
         </Drawer.Navigator>
     )
 }

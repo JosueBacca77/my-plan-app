@@ -1,11 +1,12 @@
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { MuscularGroups } from "./muscularGroups";
-import { Exersices } from "./excersices";
+import { Exercises } from "./excercises";
 import { useTheme } from "native-base";
-import Students from "./students/students/Students";
 import React from 'react';
 import MyProfile from '../user/MyProfile';
+import { EXERCISES, MUSCULAR_GROUPS, MY_PROFILE, STUDENTS } from '../../configs/constants/strings';
+import Students from './students/Students';
 
 
 type RootDrawerParamList = {
@@ -32,10 +33,10 @@ export default function TrainerHome(){
                 },
             }}
         >
-            <Drawer.Screen name='Alumnos' component={Students} />
-            <Drawer.Screen name='Grupos Musculares' component={MuscularGroups} />
-            <Drawer.Screen name="Ejercicios" component={Exersices} />
-            <Drawer.Screen name="Mi perfil" component={MyProfile} />
+            <Drawer.Screen name={STUDENTS} component={Students} />
+            <Drawer.Screen name={MUSCULAR_GROUPS} component={MuscularGroups} />
+            <Drawer.Screen name={EXERCISES}  component={Exercises} />
+            <Drawer.Screen name={MY_PROFILE} component={MyProfile} />
         </Drawer.Navigator>
     )
 }

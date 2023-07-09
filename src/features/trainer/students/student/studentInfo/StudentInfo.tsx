@@ -2,7 +2,7 @@ import { Flex } from "native-base";
 import { StudentInfoProps } from "./types";
 import StudentPersonalInformation from "./personalInfo/StudentPersonalInformation";
 import StudentTrainingInformation from "./trainingInfo/StudentTrainingInformation";
-import Text from "../../../../../../components/Text/Text";
+import Text from "../../../../../components/Text/Text";
 
 export default function StudentInfo(studentInfoProps: StudentInfoProps) {
 

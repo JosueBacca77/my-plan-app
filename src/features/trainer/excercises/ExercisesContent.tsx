@@ -1,7 +1,7 @@
 import { Select, useTheme } from "native-base";
 import {StyleSheet, View} from "react-native"
 import { MuscularGroup } from "../../../interfaces/MuscularGroup.interface";
-import { Exersice } from "../../../interfaces/Exersice.interface";
+import { Exercise } from "../../../interfaces/Exercise.interface";
 import { useState } from "react";
 import NewExerciseForm from "./NewExerciseForm/NewExerciseForm";
 import { NEW_EXERCISE } from "../../../configs/constants/strings";
@@ -10,12 +10,12 @@ import TextsList from "../../../components/TextsList/TextsList";
 import CircleAddButton from "../../../components/CircleButton/CircleButton";
 
 
-type ExersicesContentTypes = {
+type ExercisesContentTypes = {
     muscularGroups: MuscularGroup[], 
-    exersices: Exersice[]
+    exercises: Exercise[]
 }
 
-const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
+const  ExercisesContent=({muscularGroups, exercises}:ExercisesContentTypes)=>{
 
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -33,12 +33,11 @@ const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
 
     const handleSubmit= (data:any) => {
         //SAVE EXERCISE
-        console.log(data)
     };
 
     return (
         <View
-            style={styles.exersicesContent}
+            style={styles.exercisesContent}
         >
             <Modal
                 modalVisible={modalVisible}
@@ -60,7 +59,7 @@ const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
             }
             </Select>
             <TextsList
-                data={exersices}
+                data={exercises}
                 numColumns={2}
                 itemPropertyText={'name'}
             />
@@ -72,10 +71,10 @@ const  ExersicesContent=({muscularGroups, exersices}:ExersicesContentTypes)=>{
 }
 
 const styles = StyleSheet.create({
-    exersicesContent:{
+    exercisesContent:{
         gap:10,
         flex:1,
     },
 })
 
-export default ExersicesContent;
+export default ExercisesContent;

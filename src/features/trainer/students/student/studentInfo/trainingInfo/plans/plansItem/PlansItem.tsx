@@ -1,7 +1,8 @@
+import Text from "../../../../../../../../components/Text/Text";
+import { TO } from "../../../../../../../../configs/constants/strings";
+import getTargetColor from "../../../../../../../../utils/helpers";
 import { PlansItemProps } from "./types";
 import { Pressable, Box, Flex } from "native-base";
-import Text from "../../../../../../../../../components/Text/Text";
-import getTargetColor from "../../../../../../../../../utils/helpers";
 
 
 export default function PlansItem(plansItemProps: PlansItemProps) {
@@ -39,7 +40,7 @@ export default function PlansItem(plansItemProps: PlansItemProps) {
                     >
                         <Flex alignItems="center" justifyContent="space-between">
                             <Text value={plan.fromDate} />
-                            <Text value="al" />
+                            <Text value={TO} />
                             <Text value={plan.toDate} />
                         </Flex>
                     </Box>

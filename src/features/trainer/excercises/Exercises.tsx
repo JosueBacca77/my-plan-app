@@ -1,7 +1,7 @@
 import MainContainer from "../../../components/MainContainer/MainContainer";
-import ExersicesContent from "./ExersicesContent";
+import ExercisesContent from "./ExercisesContent";
 
-const Exersices=()=>{
+const Exercises=()=>{
 
     const muscularGroups = [
         {
@@ -34,7 +34,7 @@ const Exersices=()=>{
         },
     ]
 
-    const exersices = [
+    const exercises = [
         {
             id:'1',
             name:'Press de banca',
@@ -53,12 +53,12 @@ const Exersices=()=>{
     ]
     return (
         <MainContainer>
-            <ExersicesContent 
-                exersices={exersices}
+            <ExercisesContent 
+                exercises={exercises}
                 muscularGroups={muscularGroups}
             />
         </MainContainer>
     )
 }
 
-export default Exersices;
+export default Exercises;

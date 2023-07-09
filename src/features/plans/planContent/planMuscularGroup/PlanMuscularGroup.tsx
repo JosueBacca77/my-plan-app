@@ -10,19 +10,19 @@ export default function PlanMuscularGroup(planMuscularGroupProps: PlanMuscularGr
 
     const theme = useTheme();
 
-    //if there is a selected day, it will select the exersices that belongs to (has in days array property) this day
-    //otherwise, it'll show all the exersices no mater days
-    const dayExersices = selectedDay ? muscularGroup.exercises.filter(exersice => exersice.days.includes(selectedDay)) : muscularGroup.exercises
+    //if there is a selected day, it will select the exercises that belongs to (has in days array property) this day
+    //otherwise, it'll show all the exercises no mater days
+    const dayExercises = selectedDay ? muscularGroup.exercises.filter(exercise => exercise.days.includes(selectedDay)) : muscularGroup.exercises
 
     return (
         <Box marginBottom={4}>
-            <Text value={muscularGroup.muscularGroup.name} variant={FontVariant.TEXT_SM} />
+            <Text value={muscularGroup.muscularGroup.name} variant={FontVariant.TEXT_SM} fontWeight="bold" />
             <Flex flex={1}>
                 {
-                    dayExersices.map((exercise, index) => (
+                    dayExercises.map((exercise, index) => (
                         <Flex flex={1} flexDirection='row' marginBottom={2} key={index}>
                             <Flex flex={1} flexDirection='row'>
-                                <Text value={exercise.exersice.name} style={{ marginRight: 4 }} />
+                                <Text value={exercise.exercise.name} style={{ marginRight: 4 }} />
                                 <Text value={exercise.description} />
                             </Flex>
                             {

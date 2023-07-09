@@ -1,6 +1,6 @@
 import { View } from "native-base";
 import { Formik } from 'formik';
-import { NewExersiceSchema } from "../schemas";
+import { NewExerciseSchema } from "../schemas";
 
 import Button from "../../../../components/Button/Button";
 import { BUTTON_TYPE } from "../../../../configs/button";
@@ -23,7 +23,7 @@ const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
             <Formik
                 initialValues={initialValues}
                 onSubmit={onSubmit}
-                validationSchema={NewExersiceSchema}
+                validationSchema={NewExerciseSchema}
             >
                 {({ handleSubmit }) => {
                     return (
