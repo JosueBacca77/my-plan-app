@@ -4,13 +4,14 @@ import { LOGIN_TEXT } from "../../../configs/constants/strings";
 import { BUTTON_TYPE } from "../../../configs/button";
 import FormikInputValue from "../../../components/Formik/FormikInputValue";
 import Button from "../../../components/Button/Button";
-import { Flex, View } from "native-base";
+import { Flex, View, useToast } from "native-base";
 import { LoginFields } from "./types";
 import { StyleSheet } from "react-native";
 import { getHP, getWP } from "../../../utils/helpers";
 import { InputTextVariant } from "../../../components/InputText/types";
 import { ReactNavigationProps } from "../../../lib/ReactNavigation/types";
 import useUserStore from "../useUserStore";
+import ToastAlert from "../../../components/Toast/ToastAlert";
 
 
 export default function Login(navigationProps: ReactNavigationProps) {
@@ -24,15 +25,38 @@ export default function Login(navigationProps: ReactNavigationProps) {
         password: '',
     };
 
+    const toast = useToast();
+
     const onSubmit = (data: LoginFields) => {
         if (data.username === 'student' && data.password === 'Test1234$') {
             setUser(false);
             navigation.navigate('PrivateRouter');
+            return
         }
         if (data.username === 'trainer' && data.password === 'Test1234$') {
             setUser(true);
             navigation.navigate('PrivateRouter');
+            return
         }
+
+        toast.show({
+            render: ({
+                id
+              }) => {
+                return (
+                    <ToastAlert
+                        id={id}
+                        status=''
+                        variant='subtle'
+                        title='Wrong credentials'
+                        description='Verify your user and password'
+                        isClosable={true}
+                        toast={toast}
+
+                    />
+                )
+            }
+        })
     };
 
     return (
