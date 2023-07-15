@@ -46,7 +46,7 @@ export default function StudentTrainingInformation(studentTrainingInformationPro
                     <HStack justifyContent="space-evenly" padding={6}>
                         <SecondaryButton
                             text="New plan"
-                            onPress={null}
+                            onPress={()=>console.log('')}
                         />
                     </HStack>
                 </TrainingSection>

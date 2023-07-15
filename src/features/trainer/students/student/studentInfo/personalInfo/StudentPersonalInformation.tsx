@@ -40,7 +40,7 @@ export default function StudentPersonalInformation(studentPersonalInformationPro
                         variant={FontVariant.TEXT_LG}
                     />
                     <Text
-                        value='Edad'
+                        value='Age'
                         variant={FontVariant.TEXT_XS}
                     />
                 </View>
@@ -59,7 +59,7 @@ export default function StudentPersonalInformation(studentPersonalInformationPro
                     </View>
 
                     <Text
-                        value='Altura'
+                        value='Height'
                         variant={FontVariant.TEXT_XS}
                     />
                 </View>
@@ -78,7 +78,7 @@ export default function StudentPersonalInformation(studentPersonalInformationPro
                         />
                     </View>
                     <Text
-                        value='Peso'
+                        value='Weight'
                         variant={FontVariant.TEXT_XS}
                     />
                 </View>

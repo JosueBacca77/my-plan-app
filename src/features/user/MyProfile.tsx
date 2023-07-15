@@ -50,13 +50,14 @@ export default function MyProfile() {
                 {
                     !user && sections.length>0 && sections.map((section, index) => (
                         <MyProfileSection
+                            key={index}
                             section={section}
                             index={index}
                             handlePressSection={handlePressSection}
                         />
                     ))
                 }
-                <TouchableOpacity key={'close_session_section'} style={styles.item} onPress={handleCloseSession}>
+                <TouchableOpacity style={styles.item} onPress={handleCloseSession}>
                     <Text key={'close_session'} value={'Close session'} variant={FontVariant.TEXT_SM}/>
                 </TouchableOpacity>
             </ScrollView>

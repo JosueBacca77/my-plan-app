@@ -30,13 +30,11 @@ export default function SecondaryButton(primaryButtonProps: ButtonProps) {
                 onPressOut={handlePressOut}
                 style={{
                     width: width,
-                    borderRadius: 20,
                     backgroundColor: isPressed ? theme.colors.secondary[700]:theme.colors.secondary[500]
                 }}
             >
                 <Text 
                     value={text}
-                    // fontColor={theme.colors.primary[50]}
                     fontColor="#333"
                     fontWeight="bold"
                 />

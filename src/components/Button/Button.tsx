@@ -12,7 +12,7 @@ export default function Button(primaryButtonProps: ButtonProps) {
 
     const theme = useTheme();
     const [isPressed, setIsPressed] = useState(false);
-    const buttonColor = variant === BUTTON_TYPE.CANCEL ? theme.colors.primary[100] : theme.colors.primary[500];
+    const buttonColor = variant === BUTTON_TYPE.CANCEL ? theme.colors.primary[50] : theme.colors.primary[500];
     const pressedButtonColor = variant === BUTTON_TYPE.CANCEL ? theme.colors.primary[200] : theme.colors.primary[700];
 
     const handlePressIn = () => {
@@ -32,12 +32,14 @@ export default function Button(primaryButtonProps: ButtonProps) {
                 onPressOut={handlePressOut}
                 style={{
                     backgroundColor: isPressed ? pressedButtonColor : buttonColor,
-                    width: width
+                    width: width,
+                    borderColor: theme.colors.primary[500] ,
+                    borderWidth:1
                 }}
             >
                 <Text
                     value={text}
-                    fontColor={theme.colors.primary[50]}
+                    fontColor={variant === BUTTON_TYPE.CANCEL ? theme.colors.primary[500] : theme.colors.primary[50] }
                     fontWeight="bold"
                     variant={FontVariant.TEXT_SM}
                 />

@@ -1,5 +1,5 @@
 export const CANCEL_TEXT='Cancel';
-export const SUBMIT_TEXT='Accept';
+export const SUBMIT_TEXT='Save';
 export const NEW_EXERCISE='New exercise';
 export const LOGIN_TEXT='Log in';
 export const MEDICAL_CONDITIONS='Medical conditions';

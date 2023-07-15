@@ -29,7 +29,7 @@ const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
                     return (
                         <View>
                             <FormikInputValue
-                                placeholder="Nombre"
+                                placeholder="Name"
                                 name='name'
                             />
                             <FormFooter>
