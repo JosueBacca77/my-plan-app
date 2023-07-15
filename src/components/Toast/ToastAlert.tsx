@@ -1,6 +1,8 @@
-import { HStack, Text, IconButton, CloseIcon, Alert } from "native-base";
+import { HStack, IconButton, CloseIcon, Alert } from "native-base";
 import { ToastAlertProps } from "./types";
 import { MaterialIcons } from '@expo/vector-icons';
+import Text from "../Text/Text";
+import { FontVariant } from "../Text/types";
 
 
 const ToastAlert = (toastAlertProps: ToastAlertProps) => {
@@ -25,21 +27,15 @@ const ToastAlert = (toastAlertProps: ToastAlertProps) => {
             status={status ? status : "info"}
             variant={variant}
             bg={variant === "error" ? "red.500" : "pink.100"}
-            borderRadius={4}
-            p={4}
+            borderRadius={8}
+            p={2}
             justifyContent="space-between"
             flexDirection="row"
             alignItems="center"
         >
             <HStack space={2} alignItems="center">
                 <MaterialIcons name="error" size={24} color="red" />
-                <Text
-                    fontSize="md"
-                    fontWeight="medium"
-                    color={variant === "solid" ? "white" : "darkText"}
-                >
-                    {title}
-                </Text>
+                <Text value={title} variant={FontVariant.TEXT_SM} />
             </HStack>
             {isClosable && (
                 <IconButton
