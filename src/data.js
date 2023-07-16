@@ -350,8 +350,8 @@ export const exercises = [
 
   const plan1 = {
     id: '1',
-    fromDate: '15/06/2022',
-    toDate: '14/07/2022',
+    fromDate: '15/07/2022',
+    toDate: '14/08/2022',
     target: 'Strength',
     muscularGroups: muscularGroupsPlan1,
     current: true
@@ -565,8 +565,8 @@ export const exercises = [
 
   const plan2 = {
     id: '2',
-    fromDate: '17/07/2022',
-    toDate: '13/08/2022',
+    fromDate: '17/06/2022',
+    toDate: '13/07/2022',
     target: 'Body Composition',
     muscularGroups: muscularGroupsPlan2,
     current: true
@@ -659,8 +659,8 @@ export const exercises = [
   
   const plan3 = {
     id: '3',
-    fromDate: '14/08/2022',
-    toDate: '10/09/2022',
+    fromDate: '14/05/2022',
+    toDate: '15/06/2022',
     target: 'Functional Fitness',
     muscularGroups: muscularGroupsPlan3,
     current: false
@@ -753,8 +753,8 @@ export const exercises = [
   
   const plan4 = {
     id: '4',
-    fromDate: '11/09/2022',
-    toDate: '08/10/2022',
+    fromDate: '13/04/2022',
+    toDate: '10/05/2022',
     target: 'Weight Loss',
     muscularGroups: muscularGroupsPlan4,
     current: false
@@ -847,14 +847,12 @@ export const exercises = [
   
   const plan5 = {
     id: '5',
-    fromDate: '09/10/2022',
-    toDate: '05/11/2022',
+    fromDate: '11/03/2022',
+    toDate: '12/04/2022',
     target: 'Endurance',
     muscularGroups: muscularGroupsPlan5,
     current: false
   };
-  
-
 
 export const student1 = {
     id: '1',
@@ -867,6 +865,127 @@ export const student1 = {
     medicalConditions: ['Overweight', 'Fracture in the left ankle'],
     plans: [plan1, plan2, plan3, plan4, plan5]
 }
+
+export const student2 = {
+  id: '2',
+  name: "Emma Thompson",
+  age: 23,
+  target: 'Strength',
+  height: 1.65,
+  weight: 60,
+  image: "https://randomuser.me/api/portraits/women/1.jpg",
+  medicalConditions: [],
+  plans: [plan1, plan2, plan4]
+};
+
+export const student3 = {
+  id: '3',
+  name: "Adam Smith",
+  age: 27,
+  target: 'Body Composition',
+  height: 1.78,
+  weight: 75,
+  image: "https://randomuser.me/api/portraits/men/2.jpg",
+  medicalConditions: ['Asthma'],
+  plans: [plan2, plan3, plan5]
+};
+
+export const student4 = {
+  id: '4',
+  name: "Olivia Johnson",
+  age: 22,
+  target: 'Strength',
+  height: 1.62,
+  weight: 55,
+  image: "https://randomuser.me/api/portraits/women/3.jpg",
+  medicalConditions: [],
+  plans: [plan1, plan4, plan5]
+};
+
+export const student5 = {
+  id: '5',
+  name: "William Davis",
+  age: 28,
+  target: 'Strength',
+  height: 1.75,
+  weight: 70,
+  image: "https://randomuser.me/api/portraits/men/4.jpg",
+  medicalConditions: [],
+  plans: [plan1, plan2, plan3]
+};
+
+export const student6 = {
+  id: '6',
+  name: "Sophia Martinez",
+  age: 24,
+  target: 'Functional Fitness',
+  height: 1.68,
+  weight: 62,
+  image: "https://randomuser.me/api/portraits/women/5.jpg",
+  medicalConditions: ['Knee Injury'],
+  plans: [plan3, plan4, plan5]
+};
+
+export const student7 = {
+  id: '7',
+  name: "James Wilson",
+  age: 26,
+  target: 'Endurance',
+  height: 1.82,
+  weight: 78,
+  image: "https://randomuser.me/api/portraits/men/6.jpg",
+  medicalConditions: [],
+  plans: [plan5]
+};
+
+export const student8 = {
+  id: '8',
+  name: "Amelia Anderson",
+  age: 23,
+  target: 'Body Composition',
+  height: 1.63,
+  weight: 57,
+  image: "https://randomuser.me/api/portraits/women/7.jpg",
+  medicalConditions: [],
+  plans: [plan2, plan3, plan5]
+};
+
+export const student9 = {
+  id: '9',
+  name: "Benjamin Thomas",
+  age: 27,
+  target: 'Strngth',
+  height: 1.76,
+  weight: 73,
+  image: "https://randomuser.me/api/portraits/men/8.jpg",
+  medicalConditions: [],
+  plans: [plan1, plan4, plan5]
+};
+
+export const student10 = {
+  id: '10',
+  name: "Ava Rodriguez",
+  age: 25,
+  target: 'Strength',
+  height: 1.70,
+  weight: 65,
+  image: "https://randomuser.me/api/portraits/women/9.jpg",
+  medicalConditions: ['Back Pain'],
+  plans: [plan1, plan2, plan3]
+};
+
+export const student11 = {
+  id: '11',
+  name: "Henry Lee",
+  age: 29,
+  target: 'Weight Loss',
+  height: 1.80,
+  weight: 79,
+  image: "https://randomuser.me/api/portraits/men/10.jpg",
+  medicalConditions: [],
+  plans: [plan4, plan5]
+};
+
 
 export const trainerUser = {
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
