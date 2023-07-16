@@ -18,7 +18,7 @@ export default function StudentHome(){
     
     useEffect(() => {
         setStudent(student1);
-    }, [setStudent]);
+    }, []);
 
     return (
         <Drawer.Navigator

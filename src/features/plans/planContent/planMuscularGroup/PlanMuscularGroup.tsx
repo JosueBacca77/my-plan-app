@@ -15,7 +15,7 @@ export default function PlanMuscularGroup(planMuscularGroupProps: PlanMuscularGr
     const dayExercises = selectedDay ? muscularGroup.exercises.filter(exercise => exercise.days.includes(selectedDay)) : muscularGroup.exercises
 
     return (
-        <Box marginBottom={4}>
+        <Box marginBottom={4} paddingRight={2} paddingLeft={2}>
             <Text value={muscularGroup.muscularGroup.name} variant={FontVariant.TEXT_SM} fontWeight="bold" />
             <Flex flex={1}>
                 {

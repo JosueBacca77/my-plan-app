@@ -2,7 +2,7 @@ import { Select, useTheme } from "native-base";
 import {StyleSheet, View} from "react-native"
 import { MuscularGroup } from "../../../interfaces/MuscularGroup.interface";
 import { Exercise } from "../../../interfaces/Exercise.interface";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import NewExerciseForm from "./NewExerciseForm/NewExerciseForm";
 import { NEW_EXERCISE } from "../../../configs/constants/strings";
 import Modal from "../../../components/Modal/Modal";
@@ -23,8 +23,13 @@ const  ExercisesContent=({muscularGroups, exercises}:ExercisesContentTypes)=>{
 
     const [muscularGroupSelected, setMuscularGroupSelected] = useState<string>('')
 
-    const handleMuscularGroupChange = (mg: string) => {
-        setMuscularGroupSelected(mg);
+    const filteredExercises = useMemo(
+        ()=>exercises.filter(exercise => exercise.muscularGroup.name === muscularGroupSelected )
+        ,[muscularGroupSelected]
+    );
+
+    const handleMuscularGroupChange = (value: string) => {
+        setMuscularGroupSelected(value);
     };
 
     const handleCancel= () => {
@@ -49,9 +54,11 @@ const  ExercisesContent=({muscularGroups, exercises}:ExercisesContentTypes)=>{
                     onSubmit={handleSubmit}
                 />
             </Modal>
-            <Select selectedValue={muscularGroupSelected} accessibilityLabel="Grupo muscular" placeholder="Grupo muscular" _selectedItem={{
+            <Select selectedValue={muscularGroupSelected} accessibilityLabel="Muscular group" placeholder="Muscular group" _selectedItem={{
                 bg: colors.primary[500]
-                }} mt={1} onValueChange={handleMuscularGroupChange}>
+                }} mt={1} 
+                onValueChange={handleMuscularGroupChange}
+                >
             {
                 muscularGroups.map((group: MuscularGroup)=>(
                     <Select.Item key={group.name} label={group.name} value={group.name} />
@@ -59,7 +66,7 @@ const  ExercisesContent=({muscularGroups, exercises}:ExercisesContentTypes)=>{
             }
             </Select>
             <TextsList
-                data={exercises}
+                data={filteredExercises}
                 numColumns={2}
                 itemPropertyText={'name'}
             />
