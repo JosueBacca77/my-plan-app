@@ -22,8 +22,7 @@ export default function PlanMuscularGroup(planMuscularGroupProps: PlanMuscularGr
                     dayExercises.map((exercise, index) => (
                         <Flex flex={1} flexDirection='row' marginBottom={2} key={index}>
                             <Flex flex={1} flexDirection='row'>
-                                <Text value={exercise.exercise.name} style={{ marginRight: 4 }} />
-                                <Text value={exercise.description} />
+                                <Text value={`${exercise.exercise.name} ${exercise.description}`}style={{ marginRight: 4 }} />
                             </Flex>
                             {
                                 !selectedDay &&

@@ -12,6 +12,8 @@ export const getAllPlanExerciseDays=(plan: PlanInterface): number[]=> {
         });
       });
     });
+
+    days.sort();
   
     return days;
   }
