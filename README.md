@@ -15,8 +15,7 @@ To install and use MyApp, follow these steps:
 2. Follow the steps for being able to execute Expo apps in https://docs.expo.dev/get-started/installation/.
 4. Build and run the app on your device or simulator.
 5. Sign up or log in to start using the app. At the moment, these are the test users available:
-username: student, password: Test1234$
-username: trainer, password: Test1234$
+username: student, password: Test1234$, username: trainer, password: Test1234$
 
 ## Feedback and Support
 
