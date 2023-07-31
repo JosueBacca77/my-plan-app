@@ -1,14 +1,13 @@
-import { View } from "native-base";
+import { Flex } from "native-base";
 import { Formik } from 'formik';
 import { NewExerciseSchema } from "../schemas";
-
 import Button from "../../../../components/Button/Button";
 import { BUTTON_TYPE } from "../../../../configs/button";
 import { CANCEL_TEXT, SUBMIT_TEXT } from "../../../../configs/constants/strings";
 import { NewExerciseProps } from "./types";
-import { StyleSheet } from "react-native";
 import FormikInputValue from "../../../../components/Formik/FormikInputValue";
 import FormFooter from "../../../../components/FormFooter/FormFooter";
+
 
 const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
 
@@ -19,7 +18,7 @@ const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
     }
 
     return (
-        <View style={styles.form}>
+        <Flex flex={1}>
             <Formik
                 initialValues={initialValues}
                 onSubmit={onSubmit}
@@ -27,7 +26,7 @@ const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
             >
                 {({ handleSubmit }) => {
                     return (
-                        <View>
+                        <Flex>
                             <FormikInputValue
                                 placeholder="Name"
                                 name='name'
@@ -46,18 +45,12 @@ const NewExerciseForm = (newExerciseFormProps:NewExerciseProps) => {
                                         width={100}
                                     />
                             </FormFooter>
-                        </View>
+                        </Flex>
                     )
                 }}
             </Formik>
-        </View>
+        </Flex>
     )
 }
-
-const styles = StyleSheet.create({
-    form: {
-        flex:1
-    },
-});
 
 export default NewExerciseForm;

@@ -11,5 +11,5 @@ export interface InputTextProps {
     variant?: InputTextVariant;
     size?: string;
     style?: ViewStyle;
-    autoCapitalize?: 'characters' | 'none' | 'senteces' | 'words';
+    autoCapitalize?: 'characters' | 'none' | 'sentences' | 'words';
 }

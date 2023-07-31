@@ -1,5 +1,5 @@
-import { Select, useTheme } from "native-base";
-import {StyleSheet, View} from "react-native"
+import { Flex, Select, useTheme } from "native-base";
+import {StyleSheet} from "react-native"
 import { MuscularGroup } from "../../../interfaces/MuscularGroup.interface";
 import { Exercise } from "../../../interfaces/Exercise.interface";
 import { useMemo, useState } from "react";
@@ -41,8 +41,9 @@ const  ExercisesContent=({muscularGroups, exercises}:ExercisesContentTypes)=>{
     };
 
     return (
-        <View
+        <Flex
             style={styles.exercisesContent}
+            flex={1}
         >
             <Modal
                 modalVisible={modalVisible}
@@ -73,14 +74,13 @@ const  ExercisesContent=({muscularGroups, exercises}:ExercisesContentTypes)=>{
             <CircleAddButton 
                 onPress={()=>setModalVisible(true)}
             />
-        </View>
+        </Flex>
     )
 }
 
 const styles = StyleSheet.create({
     exercisesContent:{
         gap:10,
-        flex:1,
     },
 })
 

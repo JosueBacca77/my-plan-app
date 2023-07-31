@@ -24,9 +24,8 @@ export default function Button(primaryButtonProps: ButtonProps) {
     };
 
     return (
-        <View style={{ height: 40 }}>
+        <View style={{ height: 50 }}>
             <NativeBaseButton
-                flex={width ? '' : "1"}
                 onPress={() => onPress()}
                 onPressIn={handlePressIn}
                 onPressOut={handlePressOut}

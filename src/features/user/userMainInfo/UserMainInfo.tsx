@@ -14,7 +14,7 @@ export default function UserMainInfo(userMaininfoProps: UserMainInfoProps) {
     const { image, name, email } = user;
 
     return (
-        <Flex flexDirection='row' justifyContent='start' alignContent='center'>
+        <Flex flexDirection='row' justifyContent='flex-start' alignItems='center'>
             <Image
                 source={{
                     uri: image

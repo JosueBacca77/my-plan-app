@@ -20,7 +20,6 @@ export default function FormikInputValue(formikInputProps: FormikInputProps) {
             <InputText
                 onChangeText={(value) => helpers.setValue(value)}
                 placeholder={placeholder}
-                style={styles.formikInput}
                 variant={variant ?? InputTextVariant.PRIMARY}
                 size={size}
                 autoCapitalize={autoCapitalize}
@@ -39,8 +38,6 @@ export default function FormikInputValue(formikInputProps: FormikInputProps) {
 }
 
 const styles = StyleSheet.create({
-    formikInput:{
-    },
     inputContainer: {
         position: 'relative',
         marginBottom: 26

@@ -1,22 +1,20 @@
 import { StyleSheet } from "react-native";
 import { FormFooterProps } from "./types";
-import { View } from "native-base";
+import { Flex } from "native-base";
 
 
 const FormFooter=(formFooterProps: FormFooterProps)=> {
     const { children } = formFooterProps;
 
     return(
-        <View style={styles.footer}>
+        <Flex style={styles.footer} flex={1} flexDirection={'row'}>
             {children}
-        </View>
+        </Flex>
     )
 }
 
 const styles = StyleSheet.create({
     footer: {
-        flex: 1,
-        flexDirection: 'row',
         justifyContent: 'space-evenly',
         paddingTop:20
     }

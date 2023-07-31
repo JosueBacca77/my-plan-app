@@ -5,5 +5,5 @@ export interface FormikInputProps {
     placeholder: string;
     variant?: InputTextVariant;
     size?: string;
-    autoCapitalize?: 'characters' | 'none' | 'senteces' | 'words';
+    autoCapitalize?: 'characters' | 'none' | 'sentences' | 'words';
 }
